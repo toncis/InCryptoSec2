@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibInCryptoSec2", "LibInCryptoSec2\LibInCryptoSec2.csproj", "{8AB1F35C-8B0D-43CB-AC11-6C48DB7B79F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InGtkCryptoSec2", "InGtkCryptoSec2\InGtkCryptoSec2.csproj", "{70DE7228-9491-4D1E-92C1-820FA73660BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70DE7228-9491-4D1E-92C1-820FA73660BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DE7228-9491-4D1E-92C1-820FA73660BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DE7228-9491-4D1E-92C1-820FA73660BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DE7228-9491-4D1E-92C1-820FA73660BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB1F35C-8B0D-43CB-AC11-6C48DB7B79F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB1F35C-8B0D-43CB-AC11-6C48DB7B79F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB1F35C-8B0D-43CB-AC11-6C48DB7B79F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB1F35C-8B0D-43CB-AC11-6C48DB7B79F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = InGtkCryptoSec2\InGtkCryptoSec2.csproj
+		Policies = $0
+		$0.StandardHeader = $1
+		$1.Text = @ \n ${FileName}\n \n Author:\n      ${AuthorName} <${AuthorEmail}>\n\n Copyright (c) ${Year} ${CopyrightHolder}\n\n This program is free software: you can redistribute it and/or modify\n it under the terms of the GNU General Public License as published by\n the Free Software Foundation, either version 3 of the License, or\n (at your option) any later version.\n\n This program is distributed in the hope that it will be useful,\n but WITHOUT ANY WARRANTY; without even the implied warranty of\n MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n GNU General Public License for more details.\n\n You should have received a copy of the GNU General Public License\n along with this program.  If not, see <http://www.gnu.org/licenses/>.
+		$1.IncludeInNewFiles = True
+		$0.VersionControlPolicy = $2
+		$2.CommitMessageStyle = $3
+		$3.Header = @${Date:dd.MM.yyyy hh:mm:ss}  ${AuthorName}  <${AuthorEmail}>\n\n
+		$3.LastFilePostfix = "@:\n  "
+		$3.IncludeDirectoryPaths = True
+		$2.inheritsSet = Mono
+		$0.ChangeLogPolicy = $4
+		$4.UpdateMode = None
+		$4.MessageStyle = $5
+		$5.Header = @${Date:dd.MM.yyyy hh:mm:ss}  ${AuthorName}  <${AuthorEmail}>\n\n
+		$5.LastFilePostfix = "@:\n  "
+		$5.IncludeDirectoryPaths = True
+		$4.inheritsSet = Mono
+		description = InCryptoSec2 .NET solution for LibInCryptoSec2 and InGtkCryptoSec2 projects.
+	EndGlobalSection
+EndGlobal
