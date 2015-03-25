@@ -160,12 +160,12 @@ namespace LibInCryptoSec2
             catch(CryptographicException)
             {
                 arrEncryptedData = new byte[0];
-                throw;
+                //throw;
             }
             catch(Exception)
             {
                 arrEncryptedData = new byte[0];
-                throw;
+                //throw;
             }
 
             return arrEncryptedData;

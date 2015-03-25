@@ -3,14 +3,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{70DE7228-9491-4D1E-92C1-820FA73660BA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>InGtkCryptoSec2</RootNamespace>
     <AssemblyName>InGtkCryptoSec2</AssemblyName>
     <Description>InGtkCryptoSec2 is a GTK application in  .NET used as front end for LibInCryptoSec2.</Description>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <StartupObject>InGtkCryptoSec2.MainClass</StartupObject>
+    <CodePage>65001</CodePage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,6 +64,58 @@
     <EmbeddedResource Include="gtk-gui\gui.stetic">
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="icons\256px-Sqlite-square-icon.svg.png" />
+    <EmbeddedResource Include="icons\MySQL1.png" />
+    <EmbeddedResource Include="icons\MySQL14.gif" />
+    <EmbeddedResource Include="icons\MySQL2.png" />
+    <EmbeddedResource Include="icons\MySQL5.png" />
+    <EmbeddedResource Include="icons\MySQL6.png" />
+    <EmbeddedResource Include="icons\MySQL7.jpg" />
+    <EmbeddedResource Include="icons\SQLite3.png" />
+    <EmbeddedResource Include="icons\SQLite4.png" />
+    <EmbeddedResource Include="icons\oracle2.png" />
+    <EmbeddedResource Include="icons\oracle3.png" />
+    <EmbeddedResource Include="icons\oracle4" />
+    <EmbeddedResource Include="icons\oracle5.jpg" />
+    <EmbeddedResource Include="icons\oracle5.png" />
+    <EmbeddedResource Include="icons\sql1.png" />
+    <EmbeddedResource Include="icons\sql2.png" />
+    <EmbeddedResource Include="icons\sql3.png" />
+    <EmbeddedResource Include="icons\sql4.png" />
+    <EmbeddedResource Include="icons\sql5.png" />
+    <EmbeddedResource Include="icons\sql6.gif" />
+    <EmbeddedResource Include="icons\sql7.png" />
+    <EmbeddedResource Include="icons\sqlite-icon.png" />
+    <EmbeddedResource Include="icons\sqlite.ico" />
+    <EmbeddedResource Include="icons\sqlserver6.png" />
+    <EmbeddedResource Include="icons\sqlserver7.png" />
+    <EmbeddedResource Include="icons\DatabaseBlue.png">
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\DatabaseSilver.png">
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\MySQL4.gif">
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\SQLite2.png">
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\oracle1.png">
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\sqlserver1.jpg">
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\sqlserver2.png">
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\sqlserver3.png">
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\sqlserver5.gif">
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -69,6 +123,14 @@
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CryptoSecActionGroup.cs" />
+    <Compile Include="DatabaseLoginWidget.cs" />
+    <Compile Include="gtk-gui\DatabaseLoginWidget.cs" />
+    <Compile Include="gtk-gui\CryptoSecActionGroup.cs" />
+    <Compile Include="DatabaseConnectionSecWidget.cs" />
+    <Compile Include="gtk-gui\DatabaseConnectionSecWidget.cs" />
+    <Compile Include="CryptoConfigWidget.cs" />
+    <Compile Include="gtk-gui\CryptoConfigWidget.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -76,5 +138,8 @@
       <Project>{8AB1F35C-8B0D-43CB-AC11-6C48DB7B79F5}</Project>
       <Name>LibInCryptoSec2</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="icons\" />
   </ItemGroup>
 </Project>

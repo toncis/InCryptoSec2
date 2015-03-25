@@ -3,14 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{8AB1F35C-8B0D-43CB-AC11-6C48DB7B79F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>LibInCryptoSec2</RootNamespace>
     <AssemblyName>LibInCryptoSec2</AssemblyName>
     <Description>LibInCryptoSec2 is a cryptography .NET library used for used for encryption and decryption.</Description>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <CodePage>65001</CodePage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

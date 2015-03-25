@@ -30,17 +30,15 @@ namespace LibInCryptoSec2
 {
 	public class DesCryptoSecManager
 	{
-		public DesCryptoSecManager ()
+		private DesCryptoSecManager ()
 		{
 		}
-
-	
 	
         #region DES3 Encriptor and Decriptor
 
         #region DES3 Parameter
-        private static string s_strDes3IV = @"y+nmm9T9b6M=";
-		private static string s_strDes3Key = @"DZutNWp8frfhbNG5wr3p+n+L5oy6nwTr";
+        private readonly static string s_strDes3IV = @"y+nmm9T9b6M=";
+        private readonly static string s_strDes3Key = @"DZutNWp8frfhbNG5wr3p+n+L5oy6nwTr";
 		#endregion
 
         #region Private Class Functions
