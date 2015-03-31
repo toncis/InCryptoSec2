@@ -1,7 +1,11 @@
 ﻿<Properties StartupItem="InGtkCryptoSec2/InGtkCryptoSec2.csproj" GitUserInfo="UsingGIT">
   <AuthorInfo Name="Tonči Sviličić" Email="tonci.svilicic@in2.hr" Copyright="Tonči Sviličić" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LICENSE">
+    <Files>
+      <File FileName="LICENSE" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
