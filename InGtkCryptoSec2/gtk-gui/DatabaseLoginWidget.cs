@@ -7,9 +7,13 @@ public partial class DatabaseLoginWidget
 	
 	private global::Gtk.Alignment GtkAlignment;
 	
-	private global::Gtk.Table table1;
+	private global::Gtk.Table tableDatabaseLogin;
 	
-	private global::Gtk.Button btnLogin;
+	private global::Gtk.Image imgDatabaseServer;
+	
+	private global::Gtk.Image imgDatabaseUser;
+	
+	private global::Gtk.Image imgUserPasswd;
 	
 	private global::Gtk.Label lblDatabaseServer;
 	
@@ -44,88 +48,101 @@ public partial class DatabaseLoginWidget
 		this.GtkAlignment.RightPadding = ((uint)(4));
 		this.GtkAlignment.BottomPadding = ((uint)(4));
 		// Container child GtkAlignment.Gtk.Container+ContainerChild
-		this.table1 = new global::Gtk.Table (((uint)(4)), ((uint)(2)), true);
-		this.table1.Name = "table1";
-		this.table1.RowSpacing = ((uint)(4));
-		this.table1.ColumnSpacing = ((uint)(4));
-		// Container child table1.Gtk.Table+TableChild
-		this.btnLogin = new global::Gtk.Button ();
-		this.btnLogin.TooltipMarkup = "Connect to database.";
-		this.btnLogin.CanFocus = true;
-		this.btnLogin.Name = "btnLogin";
-		this.btnLogin.UseUnderline = true;
-		this.btnLogin.Label = global::Mono.Unix.Catalog.GetString ("Login");
-		global::Gtk.Image w1 = new global::Gtk.Image ();
-		w1.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-connect", global::Gtk.IconSize.Menu);
-		this.btnLogin.Image = w1;
-		this.table1.Add (this.btnLogin);
-		global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.table1 [this.btnLogin]));
-		w2.TopAttach = ((uint)(3));
-		w2.BottomAttach = ((uint)(4));
-		w2.LeftAttach = ((uint)(1));
-		w2.RightAttach = ((uint)(2));
+		this.tableDatabaseLogin = new global::Gtk.Table (((uint)(3)), ((uint)(3)), false);
+		this.tableDatabaseLogin.Name = "tableDatabaseLogin";
+		this.tableDatabaseLogin.RowSpacing = ((uint)(4));
+		this.tableDatabaseLogin.ColumnSpacing = ((uint)(4));
+		// Container child tableDatabaseLogin.Gtk.Table+TableChild
+		this.imgDatabaseServer = new global::Gtk.Image ();
+		this.imgDatabaseServer.Name = "imgDatabaseServer";
+		this.imgDatabaseServer.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.Database_16x16.png");
+		this.tableDatabaseLogin.Add (this.imgDatabaseServer);
+		global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.tableDatabaseLogin [this.imgDatabaseServer]));
+		w1.TopAttach = ((uint)(2));
+		w1.BottomAttach = ((uint)(3));
+		w1.XOptions = ((global::Gtk.AttachOptions)(4));
+		w1.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child tableDatabaseLogin.Gtk.Table+TableChild
+		this.imgDatabaseUser = new global::Gtk.Image ();
+		this.imgDatabaseUser.Name = "imgDatabaseUser";
+		this.imgDatabaseUser.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.user_16x16.png");
+		this.tableDatabaseLogin.Add (this.imgDatabaseUser);
+		global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.tableDatabaseLogin [this.imgDatabaseUser]));
 		w2.XOptions = ((global::Gtk.AttachOptions)(4));
 		w2.YOptions = ((global::Gtk.AttachOptions)(4));
-		// Container child table1.Gtk.Table+TableChild
+		// Container child tableDatabaseLogin.Gtk.Table+TableChild
+		this.imgUserPasswd = new global::Gtk.Image ();
+		this.imgUserPasswd.Name = "imgUserPasswd";
+		this.imgUserPasswd.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.passwd_16x16.png");
+		this.tableDatabaseLogin.Add (this.imgUserPasswd);
+		global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.tableDatabaseLogin [this.imgUserPasswd]));
+		w3.TopAttach = ((uint)(1));
+		w3.BottomAttach = ((uint)(2));
+		w3.XOptions = ((global::Gtk.AttachOptions)(4));
+		w3.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child tableDatabaseLogin.Gtk.Table+TableChild
 		this.lblDatabaseServer = new global::Gtk.Label ();
 		this.lblDatabaseServer.Name = "lblDatabaseServer";
 		this.lblDatabaseServer.LabelProp = global::Mono.Unix.Catalog.GetString ("Server :");
-		this.lblDatabaseServer.Justify = ((global::Gtk.Justification)(1));
 		this.lblDatabaseServer.SingleLineMode = true;
-		this.table1.Add (this.lblDatabaseServer);
-		global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table1 [this.lblDatabaseServer]));
-		w3.TopAttach = ((uint)(2));
-		w3.BottomAttach = ((uint)(3));
-		w3.XOptions = ((global::Gtk.AttachOptions)(4));
-		w3.YOptions = ((global::Gtk.AttachOptions)(4));
-		// Container child table1.Gtk.Table+TableChild
+		this.tableDatabaseLogin.Add (this.lblDatabaseServer);
+		global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.tableDatabaseLogin [this.lblDatabaseServer]));
+		w4.TopAttach = ((uint)(2));
+		w4.BottomAttach = ((uint)(3));
+		w4.LeftAttach = ((uint)(1));
+		w4.RightAttach = ((uint)(2));
+		w4.XOptions = ((global::Gtk.AttachOptions)(4));
+		w4.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child tableDatabaseLogin.Gtk.Table+TableChild
 		this.lblUserName = new global::Gtk.Label ();
 		this.lblUserName.Name = "lblUserName";
 		this.lblUserName.LabelProp = global::Mono.Unix.Catalog.GetString ("User Name :");
 		this.lblUserName.SingleLineMode = true;
-		this.table1.Add (this.lblUserName);
-		global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table1 [this.lblUserName]));
-		w4.XOptions = ((global::Gtk.AttachOptions)(4));
-		w4.YOptions = ((global::Gtk.AttachOptions)(4));
-		// Container child table1.Gtk.Table+TableChild
+		this.tableDatabaseLogin.Add (this.lblUserName);
+		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.tableDatabaseLogin [this.lblUserName]));
+		w5.LeftAttach = ((uint)(1));
+		w5.RightAttach = ((uint)(2));
+		w5.XOptions = ((global::Gtk.AttachOptions)(4));
+		w5.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child tableDatabaseLogin.Gtk.Table+TableChild
 		this.lblUserPasswd = new global::Gtk.Label ();
 		this.lblUserPasswd.Name = "lblUserPasswd";
 		this.lblUserPasswd.LabelProp = global::Mono.Unix.Catalog.GetString ("Password :");
-		this.table1.Add (this.lblUserPasswd);
-		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1 [this.lblUserPasswd]));
-		w5.TopAttach = ((uint)(1));
-		w5.BottomAttach = ((uint)(2));
-		w5.XOptions = ((global::Gtk.AttachOptions)(4));
-		w5.YOptions = ((global::Gtk.AttachOptions)(4));
-		// Container child table1.Gtk.Table+TableChild
+		this.tableDatabaseLogin.Add (this.lblUserPasswd);
+		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.tableDatabaseLogin [this.lblUserPasswd]));
+		w6.TopAttach = ((uint)(1));
+		w6.BottomAttach = ((uint)(2));
+		w6.LeftAttach = ((uint)(1));
+		w6.RightAttach = ((uint)(2));
+		w6.XOptions = ((global::Gtk.AttachOptions)(4));
+		w6.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child tableDatabaseLogin.Gtk.Table+TableChild
 		this.txtDatabaseServer = new global::Gtk.Entry ();
 		this.txtDatabaseServer.TooltipMarkup = "Database server name.";
 		this.txtDatabaseServer.CanFocus = true;
 		this.txtDatabaseServer.Name = "txtDatabaseServer";
 		this.txtDatabaseServer.IsEditable = true;
 		this.txtDatabaseServer.InvisibleChar = '●';
-		this.table1.Add (this.txtDatabaseServer);
-		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table1 [this.txtDatabaseServer]));
-		w6.TopAttach = ((uint)(2));
-		w6.BottomAttach = ((uint)(3));
-		w6.LeftAttach = ((uint)(1));
-		w6.RightAttach = ((uint)(2));
-		w6.XOptions = ((global::Gtk.AttachOptions)(4));
-		w6.YOptions = ((global::Gtk.AttachOptions)(4));
-		// Container child table1.Gtk.Table+TableChild
+		this.tableDatabaseLogin.Add (this.txtDatabaseServer);
+		global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.tableDatabaseLogin [this.txtDatabaseServer]));
+		w7.TopAttach = ((uint)(2));
+		w7.BottomAttach = ((uint)(3));
+		w7.LeftAttach = ((uint)(2));
+		w7.RightAttach = ((uint)(3));
+		w7.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child tableDatabaseLogin.Gtk.Table+TableChild
 		this.txtUserName = new global::Gtk.Entry ();
 		this.txtUserName.TooltipMarkup = "Database user name.";
 		this.txtUserName.CanFocus = true;
 		this.txtUserName.Name = "txtUserName";
 		this.txtUserName.IsEditable = true;
 		this.txtUserName.InvisibleChar = '●';
-		this.table1.Add (this.txtUserName);
-		global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table1 [this.txtUserName]));
-		w7.LeftAttach = ((uint)(1));
-		w7.RightAttach = ((uint)(2));
-		w7.XOptions = ((global::Gtk.AttachOptions)(4));
-		w7.YOptions = ((global::Gtk.AttachOptions)(4));
-		// Container child table1.Gtk.Table+TableChild
+		this.tableDatabaseLogin.Add (this.txtUserName);
+		global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.tableDatabaseLogin [this.txtUserName]));
+		w8.LeftAttach = ((uint)(2));
+		w8.RightAttach = ((uint)(3));
+		w8.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child tableDatabaseLogin.Gtk.Table+TableChild
 		this.txtUserPasswd = new global::Gtk.Entry ();
 		this.txtUserPasswd.TooltipMarkup = "Database user password.";
 		this.txtUserPasswd.CanFocus = true;
@@ -133,15 +150,14 @@ public partial class DatabaseLoginWidget
 		this.txtUserPasswd.IsEditable = true;
 		this.txtUserPasswd.Visibility = false;
 		this.txtUserPasswd.InvisibleChar = '●';
-		this.table1.Add (this.txtUserPasswd);
-		global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.table1 [this.txtUserPasswd]));
-		w8.TopAttach = ((uint)(1));
-		w8.BottomAttach = ((uint)(2));
-		w8.LeftAttach = ((uint)(1));
-		w8.RightAttach = ((uint)(2));
-		w8.XOptions = ((global::Gtk.AttachOptions)(4));
-		w8.YOptions = ((global::Gtk.AttachOptions)(4));
-		this.GtkAlignment.Add (this.table1);
+		this.tableDatabaseLogin.Add (this.txtUserPasswd);
+		global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.tableDatabaseLogin [this.txtUserPasswd]));
+		w9.TopAttach = ((uint)(1));
+		w9.BottomAttach = ((uint)(2));
+		w9.LeftAttach = ((uint)(2));
+		w9.RightAttach = ((uint)(3));
+		w9.YOptions = ((global::Gtk.AttachOptions)(4));
+		this.GtkAlignment.Add (this.tableDatabaseLogin);
 		this.fraDatabaseLogin.Add (this.GtkAlignment);
 		this.GtkLabel1 = new global::Gtk.Label ();
 		this.GtkLabel1.Name = "GtkLabel1";

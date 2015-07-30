@@ -94,7 +94,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Bin" id="DatabaseLoginWidget" design-size="342 156">
+  <widget class="Gtk.Bin" id="DatabaseLoginWidget" design-size="506 161">
     <property name="MemberName" />
     <property name="Visible">False</property>
     <child>
@@ -112,31 +112,56 @@
             <property name="RightPadding">4</property>
             <property name="BottomPadding">4</property>
             <child>
-              <widget class="Gtk.Table" id="table1">
+              <widget class="Gtk.Table" id="tableDatabaseLogin">
                 <property name="MemberName" />
-                <property name="NRows">4</property>
-                <property name="NColumns">2</property>
-                <property name="Homogeneous">True</property>
+                <property name="NRows">3</property>
+                <property name="NColumns">3</property>
                 <property name="RowSpacing">4</property>
                 <property name="ColumnSpacing">4</property>
                 <child>
-                  <placeholder />
-                </child>
-                <child>
-                  <widget class="Gtk.Button" id="btnLogin">
+                  <widget class="Gtk.Image" id="imgDatabaseServer">
                     <property name="MemberName" />
-                    <property name="Tooltip" translatable="yes">Connect to database.</property>
-                    <property name="CanFocus">True</property>
-                    <property name="Type">TextAndIcon</property>
-                    <property name="Icon">stock:gtk-connect Menu</property>
-                    <property name="Label" translatable="yes">Login</property>
-                    <property name="UseUnderline">True</property>
+                    <property name="Pixbuf">resource:InGtkCryptoSec2.icons.Database_16x16.png</property>
                   </widget>
                   <packing>
-                    <property name="TopAttach">3</property>
-                    <property name="BottomAttach">4</property>
-                    <property name="LeftAttach">1</property>
-                    <property name="RightAttach">2</property>
+                    <property name="TopAttach">2</property>
+                    <property name="BottomAttach">3</property>
+                    <property name="AutoSize">True</property>
+                    <property name="XOptions">Fill</property>
+                    <property name="YOptions">Fill</property>
+                    <property name="XExpand">False</property>
+                    <property name="XFill">True</property>
+                    <property name="XShrink">False</property>
+                    <property name="YExpand">False</property>
+                    <property name="YFill">True</property>
+                    <property name="YShrink">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Image" id="imgDatabaseUser">
+                    <property name="MemberName" />
+                    <property name="Pixbuf">resource:InGtkCryptoSec2.icons.user_16x16.png</property>
+                  </widget>
+                  <packing>
+                    <property name="AutoSize">True</property>
+                    <property name="XOptions">Fill</property>
+                    <property name="YOptions">Fill</property>
+                    <property name="XExpand">False</property>
+                    <property name="XFill">True</property>
+                    <property name="XShrink">False</property>
+                    <property name="YExpand">False</property>
+                    <property name="YFill">True</property>
+                    <property name="YShrink">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Image" id="imgUserPasswd">
+                    <property name="MemberName" />
+                    <property name="Pixbuf">resource:InGtkCryptoSec2.icons.passwd_16x16.png</property>
+                  </widget>
+                  <packing>
+                    <property name="TopAttach">1</property>
+                    <property name="BottomAttach">2</property>
                     <property name="AutoSize">True</property>
                     <property name="XOptions">Fill</property>
                     <property name="YOptions">Fill</property>
@@ -152,12 +177,13 @@
                   <widget class="Gtk.Label" id="lblDatabaseServer">
                     <property name="MemberName" />
                     <property name="LabelProp" translatable="yes">Server :</property>
-                    <property name="Justify">Right</property>
                     <property name="SingleLineMode">True</property>
                   </widget>
                   <packing>
                     <property name="TopAttach">2</property>
                     <property name="BottomAttach">3</property>
+                    <property name="LeftAttach">1</property>
+                    <property name="RightAttach">2</property>
                     <property name="AutoSize">True</property>
                     <property name="XOptions">Fill</property>
                     <property name="YOptions">Fill</property>
@@ -176,6 +202,8 @@
                     <property name="SingleLineMode">True</property>
                   </widget>
                   <packing>
+                    <property name="LeftAttach">1</property>
+                    <property name="RightAttach">2</property>
                     <property name="AutoSize">True</property>
                     <property name="XOptions">Fill</property>
                     <property name="YOptions">Fill</property>
@@ -195,6 +223,8 @@
                   <packing>
                     <property name="TopAttach">1</property>
                     <property name="BottomAttach">2</property>
+                    <property name="LeftAttach">1</property>
+                    <property name="RightAttach">2</property>
                     <property name="AutoSize">True</property>
                     <property name="XOptions">Fill</property>
                     <property name="YOptions">Fill</property>
@@ -217,12 +247,11 @@
                   <packing>
                     <property name="TopAttach">2</property>
                     <property name="BottomAttach">3</property>
-                    <property name="LeftAttach">1</property>
-                    <property name="RightAttach">2</property>
+                    <property name="LeftAttach">2</property>
+                    <property name="RightAttach">3</property>
                     <property name="AutoSize">True</property>
-                    <property name="XOptions">Fill</property>
                     <property name="YOptions">Fill</property>
-                    <property name="XExpand">False</property>
+                    <property name="XExpand">True</property>
                     <property name="XFill">True</property>
                     <property name="XShrink">False</property>
                     <property name="YExpand">False</property>
@@ -239,12 +268,11 @@
                     <property name="InvisibleChar">●</property>
                   </widget>
                   <packing>
-                    <property name="LeftAttach">1</property>
-                    <property name="RightAttach">2</property>
+                    <property name="LeftAttach">2</property>
+                    <property name="RightAttach">3</property>
                     <property name="AutoSize">True</property>
-                    <property name="XOptions">Fill</property>
                     <property name="YOptions">Fill</property>
-                    <property name="XExpand">False</property>
+                    <property name="XExpand">True</property>
                     <property name="XFill">True</property>
                     <property name="XShrink">False</property>
                     <property name="YExpand">False</property>
@@ -264,12 +292,11 @@
                   <packing>
                     <property name="TopAttach">1</property>
                     <property name="BottomAttach">2</property>
-                    <property name="LeftAttach">1</property>
-                    <property name="RightAttach">2</property>
+                    <property name="LeftAttach">2</property>
+                    <property name="RightAttach">3</property>
                     <property name="AutoSize">True</property>
-                    <property name="XOptions">Fill</property>
                     <property name="YOptions">Fill</property>
-                    <property name="XExpand">False</property>
+                    <property name="XExpand">True</property>
                     <property name="XFill">True</property>
                     <property name="XShrink">False</property>
                     <property name="YExpand">False</property>

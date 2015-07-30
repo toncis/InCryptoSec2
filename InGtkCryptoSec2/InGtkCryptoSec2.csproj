@@ -119,6 +119,9 @@
     <EmbeddedResource Include="icons\keys.ico" />
     <EmbeddedResource Include="icons\MMX-2 Icon 59.ico" />
     <EmbeddedResource Include="icons\components.ico" />
+    <EmbeddedResource Include="icons\Database_16x16.png" />
+    <EmbeddedResource Include="icons\passwd_16x16.png" />
+    <EmbeddedResource Include="icons\user_16x16.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
