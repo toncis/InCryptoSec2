@@ -35,6 +35,7 @@ public partial class DatabaseLoginWidget
 		this.fraDatabaseLogin = new global::Gtk.Frame ();
 		this.fraDatabaseLogin.Name = "fraDatabaseLogin";
 		this.fraDatabaseLogin.ShadowType = ((global::Gtk.ShadowType)(1));
+		this.fraDatabaseLogin.BorderWidth = ((uint)(3));
 		// Container child fraDatabaseLogin.Gtk.Container+ContainerChild
 		this.GtkAlignment = new global::Gtk.Alignment (0F, 0F, 1F, 1F);
 		this.GtkAlignment.Name = "GtkAlignment";

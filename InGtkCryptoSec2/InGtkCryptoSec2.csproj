@@ -116,6 +116,9 @@
     <EmbeddedResource Include="icons\sqlserver5.gif">
       <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
     </EmbeddedResource>
+    <EmbeddedResource Include="icons\keys.ico" />
+    <EmbeddedResource Include="icons\MMX-2 Icon 59.ico" />
+    <EmbeddedResource Include="icons\components.ico" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -131,6 +134,14 @@
     <Compile Include="gtk-gui\DatabaseConnectionSecWidget.cs" />
     <Compile Include="CryptoConfigWidget.cs" />
     <Compile Include="gtk-gui\CryptoConfigWidget.cs" />
+    <Compile Include="CryptoSec2TitleWidget.cs" />
+    <Compile Include="CryptoSec2FooterWidget.cs" />
+    <Compile Include="gtk-gui\CryptoSec2FooterWidget.cs" />
+    <Compile Include="gtk-gui\CryptoSec2TitleWidget.cs" />
+    <Compile Include="WinCryptoSec2.cs" />
+    <Compile Include="gtk-gui\WinCryptoSec2.cs" />
+    <Compile Include="WidCryptoDatabase.cs" />
+    <Compile Include="gtk-gui\WidCryptoDatabase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

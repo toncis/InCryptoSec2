@@ -39,6 +39,7 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="SymmetricCryptography\DesCryptoSecManager.cs" />
     <Compile Include="AsymmetricCryptography\RsaCryptoSecManager.cs" />
+    <Compile Include="SymmetricCryptography\AesCryptoSecManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

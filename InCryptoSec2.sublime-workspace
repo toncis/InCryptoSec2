@@ -15,7 +15,7 @@
 			"file": "InCryptoSec2.sln",
 			"settings":
 			{
-				"buffer_size": 2833,
+				"buffer_size": 9815,
 				"line_ending": "Windows"
 			}
 		},
@@ -23,7 +23,7 @@
 			"file": "LibInCryptoSec2/AsymmetricCryptography/RsaCryptoSecManager.cs",
 			"settings":
 			{
-				"buffer_size": 19096,
+				"buffer_size": 19093,
 				"line_ending": "Windows"
 			}
 		},
@@ -36,26 +36,31 @@
 			}
 		},
 		{
-			"file": "InGtkCryptoSec2/MainWindow.cs",
+			"file": "LibInCryptoSec2/SymmetricCryptography/DesCryptoSecManager.cs",
 			"settings":
 			{
-				"buffer_size": 1054,
-				"line_ending": "Unix"
+				"buffer_size": 23265,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "InGtkCryptoSec2/AssemblyInfo.cs",
 			"settings":
 			{
-				"buffer_size": 1789,
-				"line_ending": "Unix"
+				"buffer_size": 1790,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 369.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -96,13 +101,16 @@
 	},
 	"expanded_folders":
 	[
-		"/home/toncis/Projects/mono/InCryptoSec2",
-		"/home/toncis/Projects/mono/InCryptoSec2/InGtkCryptoSec2",
-		"/home/toncis/Projects/mono/InCryptoSec2/InGtkCryptoSec2/gtk-gui",
-		"/home/toncis/Projects/mono/InCryptoSec2/LibInCryptoSec2"
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2/gtk-gui",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2/obj",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/SymmetricCryptography"
 	],
 	"file_history":
 	[
+		"/home/toncis/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/home/toncis/Projects/mono/InCryptoSec2/InCryptoSec2.sublime-project",
 		"/home/toncis/Projects/mono/iTextSharp/srcbc/crypto/generators/Pkcs5S1ParametersGenerator.cs",
 		"/home/toncis/Projects/mono/iTextSharp/srcbc/util/Arrays.cs",
@@ -142,7 +150,6 @@
 		"/home/toncis/.config/sublime-text-3/Packages/User/OmniSharpSublime.sublime-settings",
 		"/home/toncis/login.sql",
 		"/home/toncis/tnsnames.ora",
-		"/home/toncis/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/home/toncis/afiedt.buf",
 		"/home/toncis/Projects/c++/qt/InDonat/donat.cpp",
 		"/home/toncis/Projects/c++/qt/C_PRIG_ADD.vb"
@@ -194,7 +201,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2833,
+						"buffer_size": 9815,
 						"regions":
 						{
 						},
@@ -223,15 +230,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19096,
+						"buffer_size": 19093,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6247,
-								6247
+								0,
+								0
 							]
 						],
 						"settings":
@@ -278,28 +285,137 @@
 				},
 				{
 					"buffer": 3,
-					"file": "InGtkCryptoSec2/MainWindow.cs",
-					"semi_transient": true,
+					"file": "LibInCryptoSec2/SymmetricCryptography/DesCryptoSecManager.cs",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1054,
+						"buffer_size": 23265,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								15341,
+								15341
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"oops":
+							{
+								"10009,10019": "Parameter can be IEnumerable",
+								"10400,10405": "Catch clause with a single 'throw' statement is redundant.",
+								"10813,10818": "Catch clause with a single 'throw' statement is redundant.",
+								"12193,12198": "Catch clause with a single 'throw' statement is redundant.",
+								"12620,12625": "Catch clause with a single 'throw' statement is redundant.",
+								"13405,13414": "Parameter can be IEnumerable",
+								"13423,13433": "Parameter can be IEnumerable",
+								"13814,13819": "Catch clause with a single 'throw' statement is redundant.",
+								"14241,14246": "Catch clause with a single 'throw' statement is redundant.",
+								"16473,16478": "Catch clause with a single 'throw' statement is redundant.",
+								"16900,16905": "Catch clause with a single 'throw' statement is redundant.",
+								"1714,1744": "Parameter can be declared with base type",
+								"17819,17828": "Parameter can be IEnumerable",
+								"17837,17847": "Parameter can be IEnumerable",
+								"1819,1825": "Assignment is redundant",
+								"18228,18233": "Catch clause with a single 'throw' statement is redundant.",
+								"18655,18660": "Catch clause with a single 'throw' statement is redundant.",
+								"20029,20034": "Catch clause with a single 'throw' statement is redundant.",
+								"20456,20461": "Catch clause with a single 'throw' statement is redundant.",
+								"2048,2060": "Use 'var' keyword",
+								"21248,21257": "Parameter can be IEnumerable",
+								"21266,21276": "Parameter can be IEnumerable",
+								"2131,2143": "Use 'var' keyword",
+								"21657,21662": "Catch clause with a single 'throw' statement is redundant.",
+								"22084,22089": "Catch clause with a single 'throw' statement is redundant.",
+								"3217,3247": "Parameter can be declared with base type",
+								"3296,3300": "Use 'var' keyword",
+								"3322,3325": "Assignment is redundant",
+								"3432,3444": "Use 'var' keyword",
+								"3520,3532": "Use 'var' keyword",
+								"3975,3988": "Static method invoked via derived type",
+								"4692,4722": "Parameter can be declared with base type",
+								"4797,4803": "Assignment is redundant",
+								"5024,5036": "Use 'var' keyword",
+								"5125,5137": "Use 'var' keyword",
+								"5477,5481": "Use 'var' keyword",
+								"6375,6405": "Parameter can be declared with base type",
+								"6454,6458": "Use 'var' keyword",
+								"6480,6483": "Assignment is redundant",
+								"6590,6602": "Use 'var' keyword",
+								"6691,6703": "Use 'var' keyword",
+								"808,813": "Using directive is not used by code and can be removed safely.",
+								"861,866": "Using directive is not used by code and can be removed safely.",
+								"8656,8661": "Catch clause with a single 'throw' statement is redundant.",
+								"9069,9074": "Catch clause with a single 'throw' statement is redundant.",
+								"9991,10000": "Parameter can be IEnumerable"
+							},
 							"syntax": "Packages/C#/C#.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5824.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -311,7 +427,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1789,
+						"buffer_size": 1790,
 						"regions":
 						{
 						},
@@ -369,7 +485,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 100.0
+		"height": 117.0
 	},
 	"output.find_results":
 	{
@@ -377,8 +493,9 @@
 	},
 	"output.variable_get":
 	{
-		"height": 0.0
+		"height": 226.0
 	},
+	"pinned_build_system": "",
 	"project": "InCryptoSec2.sublime-project",
 	"replace":
 	{
@@ -388,6 +505,7 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -396,6 +514,7 @@
 	"select_project":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -404,6 +523,7 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],

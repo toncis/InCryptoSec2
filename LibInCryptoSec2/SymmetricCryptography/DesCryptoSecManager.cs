@@ -145,7 +145,7 @@ namespace LibInCryptoSec2
                 strDataReader.Position = 0;
                 strDataReader.Read(bResult, 0, bResult.Length);
 
-                strEncryptedData = System.Convert.ToBase64String(bResult);
+                strEncryptedData = Convert.ToBase64String(bResult);
 
                 // Close Streams
                 strDataReader.Close();
