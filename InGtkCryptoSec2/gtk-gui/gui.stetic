@@ -6,7 +6,7 @@
   </configuration>
   <import>
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <widget-library name="../bin/Debug/InGtkCryptoSec2.exe" internal="true" />
+    <widget-library name="../bin/Release/InGtkCryptoSec2.exe" internal="true" />
   </import>
   <action-group name="CryptoSecActionGroup">
     <action id="OracleAction">
@@ -811,6 +811,7 @@
               <widget class="Gtk.HBox" id="hbox6">
                 <property name="MemberName" />
                 <property name="Spacing">6</property>
+                <property name="BorderWidth">3</property>
                 <child>
                   <widget class="Gtk.HBox" id="hbox10">
                     <property name="MemberName" />
@@ -855,7 +856,7 @@
                     <property name="WidthRequest">150</property>
                     <property name="Tooltip" translatable="yes">Change database.</property>
                     <property name="Type">TextAndIcon</property>
-                    <property name="Icon">resource:InGtkCryptoSec2.icons.database1_16x16.png</property>
+                    <property name="Icon">resource:InGtkCryptoSec2.icons.database1_32x32.png</property>
                     <property name="Label" translatable="yes">DATABASE</property>
                     <property name="UseUnderline">True</property>
                     <signal name="Clicked" handler="btnDatabaseConfig_OnClick" />
@@ -1156,11 +1157,11 @@
                   <widget class="Gtk.Button" id="btnLogin">
                     <property name="MemberName" />
                     <property name="WidthRequest">150</property>
-                    <property name="Tooltip">Login to the databse.</property>
+                    <property name="Tooltip">Login to the database.</property>
                     <property name="CanDefault">True</property>
                     <property name="CanFocus">True</property>
                     <property name="Type">TextAndIcon</property>
-                    <property name="Icon">stock:gtk-connect Menu</property>
+                    <property name="Icon">resource:InGtkCryptoSec2.icons.mSecure_32x32.png</property>
                     <property name="Label">LOGIN</property>
                     <signal name="Clicked" handler="btnLogin_OnClick" />
                   </widget>
@@ -1197,6 +1198,7 @@
               <widget class="Gtk.HBox" id="hbox7">
                 <property name="MemberName" />
                 <property name="Spacing">6</property>
+                <property name="BorderWidth">3</property>
                 <child>
                   <widget class="Gtk.HBox" id="hbox11">
                     <property name="MemberName" />
@@ -1241,7 +1243,7 @@
                     <property name="WidthRequest">150</property>
                     <property name="Tooltip" translatable="yes">Change cryptography.</property>
                     <property name="Type">TextAndIcon</property>
-                    <property name="Icon">resource:InGtkCryptoSec2.icons.lock_preferences_16x16.png</property>
+                    <property name="Icon">resource:InGtkCryptoSec2.icons.lock_preferences_32x32.png</property>
                     <property name="Label" translatable="yes">ENCRYPTION</property>
                     <property name="UseUnderline">True</property>
                     <signal name="Clicked" handler="btnCryptoConfig_OnClick" />
@@ -1281,9 +1283,9 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Dialog" id="InGtkCryptoSec2.WinDatabaseConfig" design-size="229 260">
+  <widget class="Gtk.Dialog" id="WinDatabaseConfig" design-size="267 250">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">InGtkCryptoSec2 - Database</property>
+    <property name="Title" translatable="yes">Set Database</property>
     <property name="Icon">resource:InGtkCryptoSec2.icons.database1_16x16.png</property>
     <property name="TypeHint">Dialog</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -1378,23 +1380,20 @@
       </widget>
     </child>
     <child internal-child="ActionArea">
-      <widget class="Gtk.HButtonBox" id="dialog1_ActionArea">
+      <widget class="Gtk.HButtonBox" id="__gtksharp_91_Stetic_TopLevelDialog_ActionArea">
         <property name="MemberName" />
-        <property name="Spacing">10</property>
-        <property name="BorderWidth">5</property>
         <property name="Size">1</property>
         <property name="LayoutStyle">End</property>
         <child>
-          <widget class="Gtk.Button" id="btnCancel">
+          <widget class="Gtk.Button" id="btnClose">
             <property name="MemberName" />
-            <property name="CanDefault">True</property>
             <property name="CanFocus">True</property>
-            <property name="UseStock">True</property>
-            <property name="Type">StockItem</property>
-            <property name="StockId">gtk-cancel</property>
-            <property name="ResponseId">-6</property>
-            <signal name="Clicked" handler="btnCancel_OnClick" />
-            <property name="label">gtk-cancel</property>
+            <property name="Type">TextAndIcon</property>
+            <property name="Icon">stock:gtk-cancel Menu</property>
+            <property name="Label" translatable="yes">_Cancel</property>
+            <property name="UseUnderline">True</property>
+            <property name="ResponseId">-5</property>
+            <signal name="Clicked" handler="btnClose_OnClick" />
           </widget>
           <packing>
             <property name="Expand">False</property>

@@ -134,6 +134,8 @@
     <EmbeddedResource Include="icons\oracle_32x32.png" />
     <EmbeddedResource Include="icons\SQLite2_32x32.png" />
     <EmbeddedResource Include="icons\MySQL_32x32.png" />
+    <EmbeddedResource Include="icons\mSecure_16x16.png" />
+    <EmbeddedResource Include="icons\mSecure_32x32.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -160,7 +162,7 @@
     <Compile Include="Model\Database\DatabaseType.cs" />
     <Compile Include="Model\Database\IDatabaseLogin.cs" />
     <Compile Include="WinDatabaseConfig.cs" />
-    <Compile Include="gtk-gui\InGtkCryptoSec2.WinDatabaseConfig.cs" />
+    <Compile Include="gtk-gui\WinDatabaseConfig.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

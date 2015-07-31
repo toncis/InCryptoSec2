@@ -21,74 +21,72 @@
 using System;
 using InCryptoSec2.InGtkCryptoSec2.Model.Database;
 
-namespace InGtkCryptoSec2
+public partial class WinDatabaseConfig : Gtk.Dialog
 {
-    public partial class WinDatabaseConfig : Gtk.Dialog
+    #region Private Class Members
+    private DatabaseType m_DatabaseType;
+    #endregion
+
+    #region Class Constructor
+    public WinDatabaseConfig()
     {
-        #region Private Class Members
-        private DatabaseType m_DatabaseType;
-        #endregion
-
-        #region Class Constructor
-        public WinDatabaseConfig()
-        {
-            this.Build();
-            this.m_DatabaseType = DatabaseType.None;
-        }
-
-        public WinDatabaseConfig(DatabaseType database)
-        {
-            this.Build();
-            m_DatabaseType = database;
-        }
-        #endregion
-
-        #region Event Handlers
-
-        protected void btnCancel_OnClick (object sender, EventArgs e)
-        {
-            this.Destroy();
-        }
-
-        protected void btnSQLServer_OnClick (object sender, EventArgs e)
-        {
-            this.m_DatabaseType = DatabaseType.SQLServer;
-            this.Destroy();
-        }
-
-        protected void btnMySQL_OnClick (object sender, EventArgs e)
-        {
-            this.m_DatabaseType = DatabaseType.MySQL;
-            this.Destroy();
-        }
-
-        protected void btnSQLite_OnClick (object sender, EventArgs e)
-        {
-            this.m_DatabaseType = DatabaseType.SQLite;
-            this.Destroy();
-        }
-
-        protected void btnOracle_OnClick (object sender, EventArgs e)
-        {
-            this.m_DatabaseType = DatabaseType.Oracle;
-            this.Hide();
-            this.Destroy();
-        }
-        #endregion
-
-        #region Public Properties
-        public DatabaseType SelectedDatabase 
-        { 
-            get
-            {
-                return m_DatabaseType;
-            }
-            set
-            {
-                m_DatabaseType = value;  
-            }
-        }
-        #endregion
+        this.Build();
+        this.m_DatabaseType = DatabaseType.None;
     }
+
+    public WinDatabaseConfig(DatabaseType database)
+    {
+        this.Build();
+        m_DatabaseType = database;
+    }
+    #endregion
+
+    #region Event Handlers
+
+    protected void btnClose_OnClick (object sender, EventArgs e)
+    {
+        this.Destroy();
+    }
+
+    protected void btnSQLServer_OnClick (object sender, EventArgs e)
+    {
+        this.m_DatabaseType = DatabaseType.SQLServer;
+        this.Destroy();
+    }
+
+    protected void btnMySQL_OnClick (object sender, EventArgs e)
+    {
+        this.m_DatabaseType = DatabaseType.MySQL;
+        this.Destroy();
+    }
+
+    protected void btnSQLite_OnClick (object sender, EventArgs e)
+    {
+        this.m_DatabaseType = DatabaseType.SQLite;
+        this.Destroy();
+    }
+
+    protected void btnOracle_OnClick (object sender, EventArgs e)
+    {
+        this.m_DatabaseType = DatabaseType.Oracle;
+        this.Hide();
+        this.Destroy();
+    }
+    #endregion
+
+    #region Public Properties
+    public DatabaseType SelectedDatabase 
+    { 
+        get
+        {
+            return m_DatabaseType;
+        }
+        set
+        {
+            m_DatabaseType = value;  
+        }
+    }
+
+    #endregion
 }
 

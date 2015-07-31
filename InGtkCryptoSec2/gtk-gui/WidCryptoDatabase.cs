@@ -88,6 +88,7 @@ public partial class WidCryptoDatabase
 		this.hbox6 = new global::Gtk.HBox ();
 		this.hbox6.Name = "hbox6";
 		this.hbox6.Spacing = 6;
+		this.hbox6.BorderWidth = ((uint)(3));
 		// Container child hbox6.Gtk.Box+BoxChild
 		this.hbox10 = new global::Gtk.HBox ();
 		this.hbox10.Name = "hbox10";
@@ -125,7 +126,7 @@ public partial class WidCryptoDatabase
 		this.btnDatabaseConfig.UseUnderline = true;
 		this.btnDatabaseConfig.Label = global::Mono.Unix.Catalog.GetString ("DATABASE");
 		global::Gtk.Image w4 = new global::Gtk.Image ();
-		w4.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.database1_16x16.png");
+		w4.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.database1_32x32.png");
 		this.btnDatabaseConfig.Image = w4;
 		this.hbox6.Add (this.btnDatabaseConfig);
 		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox6 [this.btnDatabaseConfig]));
@@ -305,14 +306,14 @@ public partial class WidCryptoDatabase
 		this.hbox8.Spacing = 6;
 		// Container child hbox8.Gtk.Box+BoxChild
 		this.btnLogin = new global::Gtk.Button ();
-		this.btnLogin.TooltipMarkup = "Login to the databse.";
+		this.btnLogin.TooltipMarkup = "Login to the database.";
 		this.btnLogin.WidthRequest = 150;
 		this.btnLogin.CanDefault = true;
 		this.btnLogin.CanFocus = true;
 		this.btnLogin.Name = "btnLogin";
 		this.btnLogin.Label = "LOGIN";
 		global::Gtk.Image w22 = new global::Gtk.Image ();
-		w22.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-connect", global::Gtk.IconSize.Menu);
+		w22.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.mSecure_32x32.png");
 		this.btnLogin.Image = w22;
 		this.hbox8.Add (this.btnLogin);
 		global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.hbox8 [this.btnLogin]));
@@ -339,6 +340,7 @@ public partial class WidCryptoDatabase
 		this.hbox7 = new global::Gtk.HBox ();
 		this.hbox7.Name = "hbox7";
 		this.hbox7.Spacing = 6;
+		this.hbox7.BorderWidth = ((uint)(3));
 		// Container child hbox7.Gtk.Box+BoxChild
 		this.hbox11 = new global::Gtk.HBox ();
 		this.hbox11.Name = "hbox11";
@@ -376,7 +378,7 @@ public partial class WidCryptoDatabase
 		this.btnCryptoConfig.UseUnderline = true;
 		this.btnCryptoConfig.Label = global::Mono.Unix.Catalog.GetString ("ENCRYPTION");
 		global::Gtk.Image w29 = new global::Gtk.Image ();
-		w29.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.lock_preferences_16x16.png");
+		w29.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.lock_preferences_32x32.png");
 		this.btnCryptoConfig.Image = w29;
 		this.hbox7.Add (this.btnCryptoConfig);
 		global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.hbox7 [this.btnCryptoConfig]));
