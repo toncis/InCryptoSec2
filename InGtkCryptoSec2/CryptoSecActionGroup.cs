@@ -20,12 +20,13 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using Gtk;
 
-    public partial class CryptoSecActionGroup : Gtk.ActionGroup
+public partial class CryptoSecActionGroup : Gtk.ActionGroup
+{
+    public CryptoSecActionGroup() : base("CryptoSecActionGroup")
     {
-        public CryptoSecActionGroup() : base("CryptoSecActionGroup")
-        {
-            this.Build();
-        }
+        this.Build();
     }
+}
 

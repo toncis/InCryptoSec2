@@ -3,7 +3,7 @@
 
 public partial class DatabaseConnectionSecWidget
 {
-	private global::Gtk.Frame frame1;
+	private global::Gtk.Frame fraDatabaseConnectionData;
 	
 	private global::Gtk.Alignment GtkAlignment;
 	
@@ -50,16 +50,18 @@ public partial class DatabaseConnectionSecWidget
 		global::Stetic.BinContainer.Attach (this);
 		this.Name = "DatabaseConnectionSecWidget";
 		// Container child DatabaseConnectionSecWidget.Gtk.Container+ContainerChild
-		this.frame1 = new global::Gtk.Frame ();
-		this.frame1.Name = "frame1";
-		this.frame1.ShadowType = ((global::Gtk.ShadowType)(1));
-		// Container child frame1.Gtk.Container+ContainerChild
+		this.fraDatabaseConnectionData = new global::Gtk.Frame ();
+		this.fraDatabaseConnectionData.Name = "fraDatabaseConnectionData";
+		this.fraDatabaseConnectionData.ShadowType = ((global::Gtk.ShadowType)(1));
+		this.fraDatabaseConnectionData.BorderWidth = ((uint)(3));
+		// Container child fraDatabaseConnectionData.Gtk.Container+ContainerChild
 		this.GtkAlignment = new global::Gtk.Alignment (0F, 0F, 1F, 1F);
 		this.GtkAlignment.Name = "GtkAlignment";
 		this.GtkAlignment.LeftPadding = ((uint)(4));
 		this.GtkAlignment.TopPadding = ((uint)(4));
 		this.GtkAlignment.RightPadding = ((uint)(4));
 		this.GtkAlignment.BottomPadding = ((uint)(4));
+		this.GtkAlignment.BorderWidth = ((uint)(1));
 		// Container child GtkAlignment.Gtk.Container+ContainerChild
 		this.vbox3 = new global::Gtk.VBox ();
 		this.vbox3.Name = "vbox3";
@@ -85,7 +87,7 @@ public partial class DatabaseConnectionSecWidget
 		this.frame2.Add (this.GtkAlignment1);
 		this.lblUserNameSecTitle = new global::Gtk.Label ();
 		this.lblUserNameSecTitle.Name = "lblUserNameSecTitle";
-		this.lblUserNameSecTitle.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>User Name</b>");
+		this.lblUserNameSecTitle.LabelProp = global::Mono.Unix.Catalog.GetString ("User Name");
 		this.lblUserNameSecTitle.UseMarkup = true;
 		this.frame2.LabelWidget = this.lblUserNameSecTitle;
 		this.vbox3.Add (this.frame2);
@@ -112,7 +114,7 @@ public partial class DatabaseConnectionSecWidget
 		this.fraDatabaseUserPasswd.Add (this.GtkAlignment2);
 		this.lblDatabaseUserPasswdSec = new global::Gtk.Label ();
 		this.lblDatabaseUserPasswdSec.Name = "lblDatabaseUserPasswdSec";
-		this.lblDatabaseUserPasswdSec.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Password</b>");
+		this.lblDatabaseUserPasswdSec.LabelProp = global::Mono.Unix.Catalog.GetString ("Password");
 		this.lblDatabaseUserPasswdSec.UseMarkup = true;
 		this.fraDatabaseUserPasswd.LabelWidget = this.lblDatabaseUserPasswdSec;
 		this.vbox3.Add (this.fraDatabaseUserPasswd);
@@ -139,7 +141,7 @@ public partial class DatabaseConnectionSecWidget
 		this.fraDatabaseServerSec.Add (this.GtkAlignment3);
 		this.lblDatabaseServerSecTitle = new global::Gtk.Label ();
 		this.lblDatabaseServerSecTitle.Name = "lblDatabaseServerSecTitle";
-		this.lblDatabaseServerSecTitle.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Server</b>");
+		this.lblDatabaseServerSecTitle.LabelProp = global::Mono.Unix.Catalog.GetString ("Server");
 		this.lblDatabaseServerSecTitle.UseMarkup = true;
 		this.fraDatabaseServerSec.LabelWidget = this.lblDatabaseServerSecTitle;
 		this.vbox3.Add (this.fraDatabaseServerSec);
@@ -166,20 +168,20 @@ public partial class DatabaseConnectionSecWidget
 		this.fraDatabaseConnectionStringSec.Add (this.GtkAlignment4);
 		this.lblDAtabaseConnectionStringSec = new global::Gtk.Label ();
 		this.lblDAtabaseConnectionStringSec.Name = "lblDAtabaseConnectionStringSec";
-		this.lblDAtabaseConnectionStringSec.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Connection String</b>");
+		this.lblDAtabaseConnectionStringSec.LabelProp = global::Mono.Unix.Catalog.GetString ("Connection String");
 		this.lblDAtabaseConnectionStringSec.UseMarkup = true;
 		this.fraDatabaseConnectionStringSec.LabelWidget = this.lblDAtabaseConnectionStringSec;
 		this.vbox3.Add (this.fraDatabaseConnectionStringSec);
 		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.fraDatabaseConnectionStringSec]));
 		w12.Position = 3;
 		this.GtkAlignment.Add (this.vbox3);
-		this.frame1.Add (this.GtkAlignment);
+		this.fraDatabaseConnectionData.Add (this.GtkAlignment);
 		this.lblDatabaseConnectinSecTitile = new global::Gtk.Label ();
 		this.lblDatabaseConnectinSecTitile.Name = "lblDatabaseConnectinSecTitile";
-		this.lblDatabaseConnectinSecTitile.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Database Connection Data</b>");
+		this.lblDatabaseConnectinSecTitile.LabelProp = global::Mono.Unix.Catalog.GetString ("Database Connection Data");
 		this.lblDatabaseConnectinSecTitile.UseMarkup = true;
-		this.frame1.LabelWidget = this.lblDatabaseConnectinSecTitile;
-		this.Add (this.frame1);
+		this.fraDatabaseConnectionData.LabelWidget = this.lblDatabaseConnectinSecTitile;
+		this.Add (this.fraDatabaseConnectionData);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}

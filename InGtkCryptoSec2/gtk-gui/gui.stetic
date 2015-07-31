@@ -94,7 +94,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Bin" id="DatabaseLoginWidget" design-size="506 161">
+  <widget class="Gtk.Bin" id="DatabaseLoginWidget" design-size="506 189">
     <property name="MemberName" />
     <property name="Visible">False</property>
     <child>
@@ -116,8 +116,9 @@
                 <property name="MemberName" />
                 <property name="NRows">3</property>
                 <property name="NColumns">3</property>
-                <property name="RowSpacing">4</property>
-                <property name="ColumnSpacing">4</property>
+                <property name="RowSpacing">5</property>
+                <property name="ColumnSpacing">10</property>
+                <property name="BorderWidth">5</property>
                 <child>
                   <widget class="Gtk.Image" id="imgDatabaseServer">
                     <property name="MemberName" />
@@ -325,9 +326,10 @@
     <property name="MemberName" />
     <property name="Visible">False</property>
     <child>
-      <widget class="Gtk.Frame" id="frame1">
+      <widget class="Gtk.Frame" id="fraDatabaseConnectionData">
         <property name="MemberName" />
         <property name="ShadowType">In</property>
+        <property name="BorderWidth">3</property>
         <child>
           <widget class="Gtk.Alignment" id="GtkAlignment">
             <property name="MemberName" />
@@ -337,6 +339,7 @@
             <property name="TopPadding">4</property>
             <property name="RightPadding">4</property>
             <property name="BottomPadding">4</property>
+            <property name="BorderWidth">1</property>
             <child>
               <widget class="Gtk.VBox" id="vbox3">
                 <property name="MemberName" />
@@ -368,7 +371,7 @@
                     <child>
                       <widget class="Gtk.Label" id="lblUserNameSecTitle">
                         <property name="MemberName" />
-                        <property name="LabelProp" translatable="yes">&lt;b&gt;User Name&lt;/b&gt;</property>
+                        <property name="LabelProp" translatable="yes">User Name</property>
                         <property name="UseMarkup">True</property>
                       </widget>
                       <packing>
@@ -408,7 +411,7 @@
                     <child>
                       <widget class="Gtk.Label" id="lblDatabaseUserPasswdSec">
                         <property name="MemberName" />
-                        <property name="LabelProp" translatable="yes">&lt;b&gt;Password&lt;/b&gt;</property>
+                        <property name="LabelProp" translatable="yes">Password</property>
                         <property name="UseMarkup">True</property>
                       </widget>
                       <packing>
@@ -448,7 +451,7 @@
                     <child>
                       <widget class="Gtk.Label" id="lblDatabaseServerSecTitle">
                         <property name="MemberName" />
-                        <property name="LabelProp" translatable="yes">&lt;b&gt;Server&lt;/b&gt;</property>
+                        <property name="LabelProp" translatable="yes">Server</property>
                         <property name="UseMarkup">True</property>
                       </widget>
                       <packing>
@@ -488,7 +491,7 @@
                     <child>
                       <widget class="Gtk.Label" id="lblDAtabaseConnectionStringSec">
                         <property name="MemberName" />
-                        <property name="LabelProp" translatable="yes">&lt;b&gt;Connection String&lt;/b&gt;</property>
+                        <property name="LabelProp" translatable="yes">Connection String</property>
                         <property name="UseMarkup">True</property>
                       </widget>
                       <packing>
@@ -508,7 +511,7 @@
         <child>
           <widget class="Gtk.Label" id="lblDatabaseConnectinSecTitile">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">&lt;b&gt;Database Connection Data&lt;/b&gt;</property>
+            <property name="LabelProp" translatable="yes">Database Connection Data</property>
             <property name="UseMarkup">True</property>
           </widget>
           <packing>
@@ -746,7 +749,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="WinCryptoSec2" design-size="1000 537">
+  <widget class="Gtk.Window" id="WinCryptoSec2" design-size="907 556">
     <property name="MemberName" />
     <property name="Title" translatable="yes">WinCryptoSec2</property>
     <property name="Icon">resource:InGtkCryptoSec2.icons.keys.ico</property>
@@ -792,13 +795,14 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Bin" id="WidCryptoDatabase" design-size="881 603">
+  <widget class="Gtk.Bin" id="WidCryptoDatabase" design-size="801 406">
     <property name="MemberName" />
     <property name="Visible">False</property>
     <child>
       <widget class="Gtk.HBox" id="hbox5">
         <property name="MemberName" />
         <property name="Spacing">6</property>
+        <property name="BorderWidth">3</property>
         <child>
           <widget class="Gtk.VBox" id="vbox2">
             <property name="MemberName" />
@@ -810,23 +814,23 @@
                 <child>
                   <widget class="Gtk.HBox" id="hbox10">
                     <property name="MemberName" />
-                    <property name="Spacing">6</property>
+                    <property name="Spacing">10</property>
                     <child>
-                      <widget class="Gtk.Image" id="image23">
+                      <widget class="Gtk.Image" id="imgDatabase">
                         <property name="MemberName" />
-                        <property name="Pixbuf">resource:InGtkCryptoSec2.icons.sql1.png</property>
+                        <property name="Pixbuf">resource:InGtkCryptoSec2.icons.database1_32x32.png</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
-                        <property name="AutoSize">False</property>
+                        <property name="AutoSize">True</property>
                         <property name="Expand">False</property>
                         <property name="Fill">False</property>
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.Label" id="label5">
+                      <widget class="Gtk.Label" id="lblDatabase">
                         <property name="MemberName" />
-                        <property name="LabelProp" translatable="yes">&lt;b&gt;Database&lt;/b&gt;</property>
+                        <property name="LabelProp" translatable="yes">Database</property>
                         <property name="UseMarkup">True</property>
                         <property name="UseUnderline">True</property>
                       </widget>
@@ -846,15 +850,18 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="Gtk.Button" id="button49">
+                  <widget class="Gtk.Button" id="btnDatabaseConfig">
                     <property name="MemberName" />
-                    <property name="CanFocus">True</property>
+                    <property name="WidthRequest">150</property>
+                    <property name="Tooltip" translatable="yes">Change database.</property>
                     <property name="Type">TextAndIcon</property>
-                    <property name="Icon">resource:InGtkCryptoSec2.icons.sqlserver2.png</property>
-                    <property name="Label" translatable="yes">GtkButton</property>
+                    <property name="Icon">resource:InGtkCryptoSec2.icons.database1_16x16.png</property>
+                    <property name="Label" translatable="yes">DATABASE</property>
                     <property name="UseUnderline">True</property>
+                    <signal name="Clicked" handler="btnDatabaseConfig_OnClick" />
                   </widget>
                   <packing>
+                    <property name="PackType">End</property>
                     <property name="Position">1</property>
                     <property name="AutoSize">True</property>
                     <property name="Expand">False</property>
@@ -864,19 +871,278 @@
               </widget>
               <packing>
                 <property name="Position">0</property>
-                <property name="AutoSize">False</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
               </packing>
             </child>
             <child>
-              <widget class="DatabaseLoginWidget" id="databaseloginwidget1">
+              <widget class="Gtk.Frame" id="fraDatabaseLogin">
                 <property name="MemberName" />
-                <property name="Events">ButtonPressMask</property>
+                <property name="ShadowType">In</property>
+                <property name="BorderWidth">3</property>
+                <child>
+                  <widget class="Gtk.Alignment" id="GtkAlignment10">
+                    <property name="MemberName" />
+                    <property name="Xalign">0</property>
+                    <property name="Yalign">0</property>
+                    <property name="LeftPadding">4</property>
+                    <property name="TopPadding">4</property>
+                    <property name="RightPadding">4</property>
+                    <property name="BottomPadding">4</property>
+                    <child>
+                      <widget class="Gtk.Table" id="tableDatabaseLogin">
+                        <property name="MemberName" />
+                        <property name="NRows">3</property>
+                        <property name="NColumns">3</property>
+                        <property name="RowSpacing">5</property>
+                        <property name="ColumnSpacing">10</property>
+                        <property name="BorderWidth">5</property>
+                        <child>
+                          <widget class="Gtk.Image" id="imgDatabaseServer">
+                            <property name="MemberName" />
+                            <property name="Pixbuf">resource:InGtkCryptoSec2.icons.Database_16x16.png</property>
+                          </widget>
+                          <packing>
+                            <property name="TopAttach">2</property>
+                            <property name="BottomAttach">3</property>
+                            <property name="AutoSize">True</property>
+                            <property name="XOptions">Fill</property>
+                            <property name="YOptions">Fill</property>
+                            <property name="XExpand">False</property>
+                            <property name="XFill">True</property>
+                            <property name="XShrink">False</property>
+                            <property name="YExpand">False</property>
+                            <property name="YFill">True</property>
+                            <property name="YShrink">False</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="Gtk.Image" id="imgDatabaseUser">
+                            <property name="MemberName" />
+                            <property name="Pixbuf">resource:InGtkCryptoSec2.icons.user_16x16.png</property>
+                          </widget>
+                          <packing>
+                            <property name="AutoSize">True</property>
+                            <property name="XOptions">Fill</property>
+                            <property name="YOptions">Fill</property>
+                            <property name="XExpand">False</property>
+                            <property name="XFill">True</property>
+                            <property name="XShrink">False</property>
+                            <property name="YExpand">False</property>
+                            <property name="YFill">True</property>
+                            <property name="YShrink">False</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="Gtk.Image" id="imgUserPasswd">
+                            <property name="MemberName" />
+                            <property name="Pixbuf">resource:InGtkCryptoSec2.icons.passwd_16x16.png</property>
+                          </widget>
+                          <packing>
+                            <property name="TopAttach">1</property>
+                            <property name="BottomAttach">2</property>
+                            <property name="AutoSize">True</property>
+                            <property name="XOptions">Fill</property>
+                            <property name="YOptions">Fill</property>
+                            <property name="XExpand">False</property>
+                            <property name="XFill">True</property>
+                            <property name="XShrink">False</property>
+                            <property name="YExpand">False</property>
+                            <property name="YFill">True</property>
+                            <property name="YShrink">False</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="Gtk.Label" id="lblDatabaseServer">
+                            <property name="MemberName" />
+                            <property name="LabelProp" translatable="yes">Server :</property>
+                            <property name="SingleLineMode">True</property>
+                          </widget>
+                          <packing>
+                            <property name="TopAttach">2</property>
+                            <property name="BottomAttach">3</property>
+                            <property name="LeftAttach">1</property>
+                            <property name="RightAttach">2</property>
+                            <property name="AutoSize">True</property>
+                            <property name="XOptions">Fill</property>
+                            <property name="YOptions">Fill</property>
+                            <property name="XExpand">False</property>
+                            <property name="XFill">True</property>
+                            <property name="XShrink">False</property>
+                            <property name="YExpand">False</property>
+                            <property name="YFill">True</property>
+                            <property name="YShrink">False</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="Gtk.Label" id="lblUserName">
+                            <property name="MemberName" />
+                            <property name="LabelProp" translatable="yes">User Name :</property>
+                            <property name="SingleLineMode">True</property>
+                          </widget>
+                          <packing>
+                            <property name="LeftAttach">1</property>
+                            <property name="RightAttach">2</property>
+                            <property name="AutoSize">True</property>
+                            <property name="XOptions">Fill</property>
+                            <property name="YOptions">Fill</property>
+                            <property name="XExpand">False</property>
+                            <property name="XFill">True</property>
+                            <property name="XShrink">False</property>
+                            <property name="YExpand">False</property>
+                            <property name="YFill">True</property>
+                            <property name="YShrink">False</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="Gtk.Label" id="lblUserPasswd">
+                            <property name="MemberName" />
+                            <property name="LabelProp" translatable="yes">Password :</property>
+                          </widget>
+                          <packing>
+                            <property name="TopAttach">1</property>
+                            <property name="BottomAttach">2</property>
+                            <property name="LeftAttach">1</property>
+                            <property name="RightAttach">2</property>
+                            <property name="AutoSize">True</property>
+                            <property name="XOptions">Fill</property>
+                            <property name="YOptions">Fill</property>
+                            <property name="XExpand">False</property>
+                            <property name="XFill">True</property>
+                            <property name="XShrink">False</property>
+                            <property name="YExpand">False</property>
+                            <property name="YFill">True</property>
+                            <property name="YShrink">False</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="Gtk.Entry" id="txtDatabaseServer">
+                            <property name="MemberName" />
+                            <property name="Tooltip" translatable="yes">Database server name.</property>
+                            <property name="CanFocus">True</property>
+                            <property name="IsEditable">True</property>
+                            <property name="InvisibleChar">●</property>
+                          </widget>
+                          <packing>
+                            <property name="TopAttach">2</property>
+                            <property name="BottomAttach">3</property>
+                            <property name="LeftAttach">2</property>
+                            <property name="RightAttach">3</property>
+                            <property name="AutoSize">True</property>
+                            <property name="YOptions">Fill</property>
+                            <property name="XExpand">True</property>
+                            <property name="XFill">True</property>
+                            <property name="XShrink">False</property>
+                            <property name="YExpand">False</property>
+                            <property name="YFill">True</property>
+                            <property name="YShrink">False</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="Gtk.Entry" id="txtUserName">
+                            <property name="MemberName" />
+                            <property name="Tooltip" translatable="yes">Database user name.</property>
+                            <property name="CanFocus">True</property>
+                            <property name="IsEditable">True</property>
+                            <property name="InvisibleChar">●</property>
+                          </widget>
+                          <packing>
+                            <property name="LeftAttach">2</property>
+                            <property name="RightAttach">3</property>
+                            <property name="AutoSize">True</property>
+                            <property name="YOptions">Fill</property>
+                            <property name="XExpand">True</property>
+                            <property name="XFill">True</property>
+                            <property name="XShrink">False</property>
+                            <property name="YExpand">False</property>
+                            <property name="YFill">True</property>
+                            <property name="YShrink">False</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="Gtk.Entry" id="txtUserPasswd">
+                            <property name="MemberName" />
+                            <property name="Tooltip" translatable="yes">Database user password.</property>
+                            <property name="CanFocus">True</property>
+                            <property name="IsEditable">True</property>
+                            <property name="Visibility">False</property>
+                            <property name="InvisibleChar">●</property>
+                          </widget>
+                          <packing>
+                            <property name="TopAttach">1</property>
+                            <property name="BottomAttach">2</property>
+                            <property name="LeftAttach">2</property>
+                            <property name="RightAttach">3</property>
+                            <property name="AutoSize">True</property>
+                            <property name="YOptions">Fill</property>
+                            <property name="XExpand">True</property>
+                            <property name="XFill">True</property>
+                            <property name="XShrink">False</property>
+                            <property name="YExpand">False</property>
+                            <property name="YFill">True</property>
+                            <property name="YShrink">False</property>
+                          </packing>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="Gtk.Label" id="lblDatabaseLogin">
+                    <property name="MemberName" />
+                    <property name="LabelProp" translatable="yes">Database Login</property>
+                    <property name="UseMarkup">True</property>
+                  </widget>
+                  <packing>
+                    <property name="type">label_item</property>
+                  </packing>
+                </child>
               </widget>
               <packing>
                 <property name="Position">1</property>
                 <property name="AutoSize">True</property>
                 <property name="Expand">False</property>
                 <property name="Fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Frame" id="fraConnectionString">
+                <property name="MemberName" />
+                <property name="ShadowType">In</property>
+                <property name="BorderWidth">3</property>
+                <child>
+                  <widget class="Gtk.Alignment" id="GtkAlignment9">
+                    <property name="MemberName" />
+                    <property name="Xalign">0</property>
+                    <property name="Yalign">0</property>
+                    <property name="LeftPadding">4</property>
+                    <property name="TopPadding">4</property>
+                    <property name="RightPadding">4</property>
+                    <property name="BottomPadding">4</property>
+                    <child>
+                      <widget class="Gtk.TextView" id="txtConnectionString">
+                        <property name="MemberName" />
+                        <property name="Text" translatable="yes" />
+                        <property name="WrapMode">Char</property>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="Gtk.Label" id="lblConnectionString">
+                    <property name="MemberName" />
+                    <property name="LabelProp" translatable="yes">Connection String</property>
+                    <property name="UseMarkup">True</property>
+                  </widget>
+                  <packing>
+                    <property name="type">label_item</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="Position">2</property>
+                <property name="AutoSize">True</property>
               </packing>
             </child>
             <child>
@@ -887,28 +1153,29 @@
                   <placeholder />
                 </child>
                 <child>
-                  <placeholder />
-                </child>
-                <child>
-                  <widget class="Gtk.Button" id="btnLogin1">
+                  <widget class="Gtk.Button" id="btnLogin">
                     <property name="MemberName" />
                     <property name="WidthRequest">150</property>
+                    <property name="Tooltip">Login to the databse.</property>
+                    <property name="CanDefault">True</property>
                     <property name="CanFocus">True</property>
                     <property name="Type">TextAndIcon</property>
                     <property name="Icon">stock:gtk-connect Menu</property>
-                    <property name="Label" translatable="yes">LOGIN</property>
-                    <property name="UseUnderline">True</property>
+                    <property name="Label">LOGIN</property>
+                    <signal name="Clicked" handler="btnLogin_OnClick" />
                   </widget>
                   <packing>
-                    <property name="Position">2</property>
-                    <property name="AutoSize">True</property>
+                    <property name="PackType">End</property>
+                    <property name="Position">1</property>
+                    <property name="AutoSize">False</property>
                     <property name="Expand">False</property>
                     <property name="Fill">False</property>
                   </packing>
                 </child>
               </widget>
               <packing>
-                <property name="Position">2</property>
+                <property name="PackType">End</property>
+                <property name="Position">3</property>
                 <property name="AutoSize">True</property>
                 <property name="Expand">False</property>
                 <property name="Fill">False</property>
@@ -931,17 +1198,56 @@
                 <property name="MemberName" />
                 <property name="Spacing">6</property>
                 <child>
-                  <placeholder />
-                </child>
-                <child>
-                  <widget class="Gtk.Button" id="button50">
+                  <widget class="Gtk.HBox" id="hbox11">
                     <property name="MemberName" />
-                    <property name="CanFocus">True</property>
-                    <property name="Type">TextOnly</property>
-                    <property name="Label" translatable="yes">GtkButton</property>
-                    <property name="UseUnderline">True</property>
+                    <property name="Spacing">10</property>
+                    <child>
+                      <widget class="Gtk.Image" id="imgEncryption">
+                        <property name="MemberName" />
+                        <property name="Pixbuf">resource:InGtkCryptoSec2.icons.lock_32x32.png</property>
+                      </widget>
+                      <packing>
+                        <property name="Position">0</property>
+                        <property name="AutoSize">True</property>
+                        <property name="Expand">False</property>
+                        <property name="Fill">False</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="Gtk.Label" id="lblEncription">
+                        <property name="MemberName" />
+                        <property name="LabelProp" translatable="yes">Encryption : RSA</property>
+                        <property name="UseMarkup">True</property>
+                        <property name="UseUnderline">True</property>
+                      </widget>
+                      <packing>
+                        <property name="Position">1</property>
+                        <property name="AutoSize">True</property>
+                        <property name="Expand">False</property>
+                        <property name="Fill">False</property>
+                      </packing>
+                    </child>
                   </widget>
                   <packing>
+                    <property name="Position">0</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Button" id="btnCryptoConfig">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">150</property>
+                    <property name="Tooltip" translatable="yes">Change cryptography.</property>
+                    <property name="Type">TextAndIcon</property>
+                    <property name="Icon">resource:InGtkCryptoSec2.icons.lock_preferences_16x16.png</property>
+                    <property name="Label" translatable="yes">ENCRYPTION</property>
+                    <property name="UseUnderline">True</property>
+                    <signal name="Clicked" handler="btnCryptoConfig_OnClick" />
+                  </widget>
+                  <packing>
+                    <property name="PackType">End</property>
                     <property name="Position">1</property>
                     <property name="AutoSize">True</property>
                     <property name="Expand">False</property>

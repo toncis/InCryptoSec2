@@ -2,21 +2,25 @@
     "folders":
     [
         {
-            "name": "OmniSharp",
-            "follow_symlinks": true,
-            "path": ".",
             "file_exclude_patterns":
             [
                 "*.meta",
                 "*.png",
                 "*.dll",
-                "*.mdb"
+                "*.mdb",
+                "*.gitignore",
+                "*.pidb"
             ],
             "folder_exclude_patterns":
             [
-                "Library"
-            ]
-        }
+                ".settings",
+                "Library",
+                "obj",
+                "bin"
+            ],
+            "name": "InCryptoSec2",
+            "path": "/home/toncis/Projects/Mono/IN2/InCryptoSec2"
+        },
     ],
     "settings":
     {

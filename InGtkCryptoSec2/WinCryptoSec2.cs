@@ -25,6 +25,15 @@ public partial class WinCryptoSec2 : Gtk.Window
     public WinCryptoSec2() : base(Gtk.WindowType.Toplevel)
     {
         this.Build();
+
+        InitForm();
     }
+
+    #region Private Member Function
+    private void InitForm()
+    {
+    }
+    #endregion
+
 }
 

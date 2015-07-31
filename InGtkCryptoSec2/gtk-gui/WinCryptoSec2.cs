@@ -53,7 +53,7 @@ public partial class WinCryptoSec2
 			this.Child.ShowAll ();
 		}
 		this.DefaultWidth = 1000;
-		this.DefaultHeight = 537;
+		this.DefaultHeight = 445;
 		this.Show ();
 	}
 }

@@ -1,4 +1,4 @@
-﻿//
+//
 //  CryptoConfigWidget.cs
 //
 //  Author:
@@ -20,6 +20,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using Gtk;
 
 [System.ComponentModel.ToolboxItem(true)]
 public partial class CryptoConfigWidget : Gtk.Bin

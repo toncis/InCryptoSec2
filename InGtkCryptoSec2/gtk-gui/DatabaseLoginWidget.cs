@@ -50,8 +50,9 @@ public partial class DatabaseLoginWidget
 		// Container child GtkAlignment.Gtk.Container+ContainerChild
 		this.tableDatabaseLogin = new global::Gtk.Table (((uint)(3)), ((uint)(3)), false);
 		this.tableDatabaseLogin.Name = "tableDatabaseLogin";
-		this.tableDatabaseLogin.RowSpacing = ((uint)(4));
-		this.tableDatabaseLogin.ColumnSpacing = ((uint)(4));
+		this.tableDatabaseLogin.RowSpacing = ((uint)(5));
+		this.tableDatabaseLogin.ColumnSpacing = ((uint)(10));
+		this.tableDatabaseLogin.BorderWidth = ((uint)(5));
 		// Container child tableDatabaseLogin.Gtk.Table+TableChild
 		this.imgDatabaseServer = new global::Gtk.Image ();
 		this.imgDatabaseServer.Name = "imgDatabaseServer";

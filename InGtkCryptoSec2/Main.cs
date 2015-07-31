@@ -29,11 +29,145 @@ namespace InGtkCryptoSec2
 		public static void Main (string[] args)
 		{
 			Application.Init ();
-			MainWindow win = new MainWindow ();
-			win.Show ();
+			//MainWindow win = new MainWindow ();
+			//win.Show ();
             WinCryptoSec2 win2 = new WinCryptoSec2 ();
             win2.Show ();
 			Application.Run ();
 		}
 	}
+
+    static class CryptoSecMessageBox
+    {
+        internal static void ShowError(Window win, string strFormat, params object[] args)
+        {
+            MessageDialog msgDiagError = new MessageDialog(
+                win, 
+                DialogFlags.DestroyWithParent, 
+                MessageType.Error, 
+                ButtonsType.Close, 
+                strFormat,
+                args);
+            msgDiagError.Run();
+            msgDiagError.Destroy();     }
+        internal static void ShowError(Window win, string strError)
+        {
+            MessageDialog msgDiagError = new MessageDialog(
+                win, 
+                DialogFlags.DestroyWithParent, 
+                MessageType.Error, 
+                ButtonsType.Close, 
+                strError);
+            msgDiagError.Run();
+            msgDiagError.Destroy();     
+        }
+        internal static void ShowError(string strError)
+        {
+            MessageDialog msgDiagError = new MessageDialog(
+                null, 
+                DialogFlags.DestroyWithParent, 
+                MessageType.Error, 
+                ButtonsType.Close, 
+                strError);
+            msgDiagError.Run();
+            msgDiagError.Destroy();     
+        }
+
+        internal static void ShowInformation(Window win, string strFormat, params object[] args)
+        {
+            MessageDialog msgDiagInformation = new MessageDialog(
+                win, 
+                DialogFlags.DestroyWithParent, 
+                MessageType.Info, 
+                ButtonsType.Ok, 
+                strFormat,
+                args);
+            msgDiagInformation.Run();
+            msgDiagInformation.Destroy();       }
+        internal static void ShowInformation(Window win, string strInfo)
+        {
+            MessageDialog msgDiagInformation = new MessageDialog(
+                win, 
+                DialogFlags.DestroyWithParent, 
+                MessageType.Info, 
+                ButtonsType.Ok, 
+                strInfo);
+            msgDiagInformation.Run();
+            msgDiagInformation.Destroy();       
+        }
+        internal static void ShowInformation(string strInfo)
+        {
+            MessageDialog msgDiagInformation = new MessageDialog(
+                null, 
+                DialogFlags.DestroyWithParent, 
+                MessageType.Info, 
+                ButtonsType.Ok, 
+                strInfo);
+            msgDiagInformation.Run();
+            msgDiagInformation.Destroy();       
+        }
+
+        internal static bool ShowQuestion(Window win, string strFormat, params object[] args)
+        {
+            bool retValue = false;
+
+            MessageDialog msgDiagQuestion = new MessageDialog(
+                win, 
+                DialogFlags.DestroyWithParent, 
+                MessageType.Question, 
+                ButtonsType.YesNo, 
+                strFormat,
+                args);
+            int iResult = msgDiagQuestion.Run();
+            msgDiagQuestion.Destroy();
+
+            if(iResult == (int)ResponseType.Accept)
+            {
+                retValue = true;
+            }
+
+            return retValue;
+        }
+        internal static bool ShowQuestion(Window win, string strQuestion)
+        {
+            bool retValue = false;
+
+            MessageDialog msgDiagQuestion = new MessageDialog(
+                win, 
+                DialogFlags.DestroyWithParent, 
+                MessageType.Question, 
+                ButtonsType.YesNo, 
+                strQuestion);
+            int iResult = msgDiagQuestion.Run();
+            msgDiagQuestion.Destroy();
+
+            if(iResult == (int)ResponseType.Accept)
+            {
+                retValue = true;
+            }
+
+            return retValue;
+        }
+        internal static bool ShowQuestion(string strQuestion)
+        {
+            bool retValue = false;
+
+            MessageDialog msgDiagQuestion = new MessageDialog(
+                null, 
+                DialogFlags.DestroyWithParent, 
+                MessageType.Question, 
+                ButtonsType.YesNo, 
+                strQuestion);
+            int iResult = msgDiagQuestion.Run();
+            msgDiagQuestion.Destroy();
+
+            if(iResult == (int)ResponseType.Accept)
+            {
+                retValue = true;
+            }
+
+            return retValue;
+        }
+    }
+
 }

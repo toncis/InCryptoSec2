@@ -30,9 +30,11 @@ namespace LibInCryptoSec2
 {
     public class RsaCryptoSecManager
     {
+        #region Class Constructor
         public RsaCryptoSecManager()
         {
         }
+        #endregion
 
         #region RSA Encriptor and Decriptor
 

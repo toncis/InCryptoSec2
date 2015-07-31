@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,6 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <StartupObject>InGtkCryptoSec2.MainClass</StartupObject>
     <CodePage>65001</CodePage>
+    <ApplicationIcon>icons\keys.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -122,6 +122,15 @@
     <EmbeddedResource Include="icons\Database_16x16.png" />
     <EmbeddedResource Include="icons\passwd_16x16.png" />
     <EmbeddedResource Include="icons\user_16x16.png" />
+    <EmbeddedResource Include="icons\lock_preferences.ico" />
+    <EmbeddedResource Include="icons\database1_32x32.png" />
+    <EmbeddedResource Include="icons\database1_16x16.png" />
+    <EmbeddedResource Include="icons\lock_16x16.png" />
+    <EmbeddedResource Include="icons\lock_32x32.png" />
+    <EmbeddedResource Include="icons\lock_preferences_16x16.png" />
+    <EmbeddedResource Include="icons\lock_preferences_32x32.png" />
+    <EmbeddedResource Include="icons\oracle_16x16.png" />
+    <EmbeddedResource Include="icons\oracle_32x32.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -145,6 +154,8 @@
     <Compile Include="gtk-gui\WinCryptoSec2.cs" />
     <Compile Include="WidCryptoDatabase.cs" />
     <Compile Include="gtk-gui\WidCryptoDatabase.cs" />
+    <Compile Include="Model\Database\DatabaseType.cs" />
+    <Compile Include="Model\Database\IDatabaseLogin.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -155,5 +166,53 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="icons\" />
+    <Folder Include="Model\" />
+    <Folder Include="Controller\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\certificate.ico" />
+    <None Include="icons\certificate_add.ico" />
+    <None Include="icons\certificate_broken.ico" />
+    <None Include="icons\certificate_delete.ico" />
+    <None Include="icons\certificate_error.ico" />
+    <None Include="icons\certificate_information.ico" />
+    <None Include="icons\certificate_new.ico" />
+    <None Include="icons\certificate_ok.ico" />
+    <None Include="icons\certificate_preferences.ico" />
+    <None Include="icons\certificate_refresh.ico" />
+    <None Include="icons\certificate_view.ico" />
+    <None Include="icons\certificate_warning.ico" />
+    <None Include="icons\key1.ico" />
+    <None Include="icons\key1_add.ico" />
+    <None Include="icons\key1_delete.ico" />
+    <None Include="icons\key1_preferences.ico" />
+    <None Include="icons\key2.ico" />
+    <None Include="icons\link.ico" />
+    <None Include="icons\link_add.ico" />
+    <None Include="icons\link_delete.ico" />
+    <None Include="icons\link_new.ico" />
+    <None Include="icons\lock.ico" />
+    <None Include="icons\lock_add.ico" />
+    <None Include="icons\lock_delete.ico" />
+    <None Include="icons\lock_error.ico" />
+    <None Include="icons\lock_information.ico" />
+    <None Include="icons\lock_new.ico" />
+    <None Include="icons\lock_ok.ico" />
+    <None Include="icons\lock_open.ico" />
+    <None Include="icons\lock_time.ico" />
+    <None Include="icons\lock_view.ico" />
+    <None Include="icons\lock_warning.ico" />
+    <None Include="icons\lock2.ico" />
+    <None Include="icons\plug.ico" />
+    <None Include="icons\plug_add.ico" />
+    <None Include="icons\plug_delete.ico" />
+    <None Include="icons\plug_new.ico" />
+    <None Include="icons\shield.ico" />
+    <None Include="icons\shield_add.ico" />
+    <None Include="icons\shield_delete.ico" />
+    <None Include="icons\shield_green.ico" />
+    <None Include="icons\shield_new.ico" />
+    <None Include="icons\shield_preferences.ico" />
+    <None Include="icons\shield_red.ico" />
   </ItemGroup>
 </Project>

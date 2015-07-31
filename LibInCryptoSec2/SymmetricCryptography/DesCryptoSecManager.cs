@@ -30,9 +30,11 @@ namespace LibInCryptoSec2
 {
 	public class DesCryptoSecManager
 	{
-		private DesCryptoSecManager ()
+        #region Class Constructor
+        private DesCryptoSecManager ()
 		{
 		}
+        #endregion
 	
         #region DES3 Encriptor and Decriptor
 
@@ -547,7 +549,6 @@ namespace LibInCryptoSec2
 			return Des3EncryptData(arrData, s_strDes3IV, s_strDes3Key);
 		}
 		#endregion	
-	
 	}
 }
 

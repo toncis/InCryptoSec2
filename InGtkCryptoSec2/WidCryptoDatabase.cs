@@ -23,10 +23,41 @@ using System;
 [System.ComponentModel.ToolboxItem(true)]
 public partial class WidCryptoDatabase : Gtk.Bin
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="WidCryptoDatabase"/> class.
+    /// </summary>
     public WidCryptoDatabase()
     {
         this.Build();
+
+        InitForm();
     }
+
+    #region Private Member Function
+    private void InitForm()
+    {
+        this.lblEncription.Text = "RSA Cryptography Provider";
+        this.lblDatabase.Text = "ORACLE";
+        this.imgDatabase.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.oracle_32x32.png");
+    }
+    #endregion
+
+    #region Event Handlers
+    protected void btnLogin_OnClick (object sender, EventArgs e)
+    {
+        throw new NotImplementedException ();
+    }
+
+    protected void btnCryptoConfig_OnClick (object sender, EventArgs e)
+    {
+        throw new NotImplementedException ();
+    }
+
+    protected void btnDatabaseConfig_OnClick (object sender, EventArgs e)
+    {
+        throw new NotImplementedException ();
+    }
+    #endregion
 }
 
 
