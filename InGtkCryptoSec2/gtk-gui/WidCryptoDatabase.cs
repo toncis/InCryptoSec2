@@ -265,7 +265,7 @@ public partial class WidCryptoDatabase
 		this.fraDatabaseLogin.Add (this.GtkAlignment10);
 		this.lblDatabaseLogin = new global::Gtk.Label ();
 		this.lblDatabaseLogin.Name = "lblDatabaseLogin";
-		this.lblDatabaseLogin.LabelProp = global::Mono.Unix.Catalog.GetString ("Database LogIn");
+		this.lblDatabaseLogin.LabelProp = global::Mono.Unix.Catalog.GetString ("Database Login");
 		this.lblDatabaseLogin.UseMarkup = true;
 		this.fraDatabaseLogin.LabelWidget = this.lblDatabaseLogin;
 		this.vbox2.Add (this.fraDatabaseLogin);

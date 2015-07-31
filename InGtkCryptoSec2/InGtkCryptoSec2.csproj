@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -131,6 +132,8 @@
     <EmbeddedResource Include="icons\lock_preferences_32x32.png" />
     <EmbeddedResource Include="icons\oracle_16x16.png" />
     <EmbeddedResource Include="icons\oracle_32x32.png" />
+    <EmbeddedResource Include="icons\SQLite2_32x32.png" />
+    <EmbeddedResource Include="icons\MySQL_32x32.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -156,6 +159,8 @@
     <Compile Include="gtk-gui\WidCryptoDatabase.cs" />
     <Compile Include="Model\Database\DatabaseType.cs" />
     <Compile Include="Model\Database\IDatabaseLogin.cs" />
+    <Compile Include="WinDatabaseConfig.cs" />
+    <Compile Include="gtk-gui\InGtkCryptoSec2.WinDatabaseConfig.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

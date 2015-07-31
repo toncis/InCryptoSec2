@@ -52,8 +52,8 @@ public partial class WinCryptoSec2
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 1000;
-		this.DefaultHeight = 445;
+		this.DefaultWidth = 907;
+		this.DefaultHeight = 556;
 		this.Show ();
 	}
 }
