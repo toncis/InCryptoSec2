@@ -1,5 +1,5 @@
-//
-//  CryptoSec2TitleWidget.cs
+﻿//
+//  WinCryptoSec2Config.cs
 //
 //  Author:
 //       Tonči Sviličić <tonci.svilicic@in2.hr>
@@ -20,11 +20,9 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using Gtk;
 using InGtkCryptoSec2.Model;
 
-[System.ComponentModel.ToolboxItem(true)]
-public partial class CryptoSec2TitleWidget : Gtk.Bin
+public partial class WinCryptoSec2Config : Gtk.Dialog
 {
     #region Private Class Members
     private CryptoSecModuleType m_CryptoSecModule;
@@ -34,44 +32,39 @@ public partial class CryptoSec2TitleWidget : Gtk.Bin
     /// <summary>
     /// CryptoSec2TitleWidget class constructor.
     /// </summary>
-    public CryptoSec2TitleWidget()
+    public WinCryptoSec2Config()
     {
-        m_CryptoSecModule = CryptoSecModuleType.Database;
+        m_CryptoSecModule = CryptoSecModuleType.None;
         this.Build();
     }
-    #endregion
-
-    #region Private Member Functions
     /// <summary>
-    /// Change InGtkCryptoSec2 application module.
+    /// CryptoSec2TitleWidget class constructor.
     /// </summary>
-    private void ChangeCryptoSecApplicationModule()
+    public WinCryptoSec2Config(CryptoSecModuleType mode)
     {
+        m_CryptoSecModule = mode;
+        this.Build();
+
         switch(m_CryptoSecModule)
         {
-            case CryptoSecModuleType.Database :
+            case CryptoSecModuleType.Database:
                 {
-                    this.lblCryptoSecModeTitle.Text = @"Database Security";
+                    this.btnDatabase.GrabFocus();
                     break;
                 }
-            case CryptoSecModuleType.FTP :
+            case CryptoSecModuleType.FTP:
                 {
-                    this.lblCryptoSecModeTitle.Text = @"FTP Security";
+                    this.btnFtp.GrabFocus();
                     break;
                 }
-            case CryptoSecModuleType.String :
+            case CryptoSecModuleType.String:
                 {
-                    this.lblCryptoSecModeTitle.Text = @"String Security";
+                    this.btnString.GrabFocus();
                     break;
                 }
-            case CryptoSecModuleType.XML :
+            case CryptoSecModuleType.XML:
                 {
-                    this.lblCryptoSecModeTitle.Text = @"XML Security";
-                    break;
-                }
-            case CryptoSecModuleType.File :
-                {
-                    this.lblCryptoSecModeTitle.Text = @"File Security";
+                    this.btnXml.GrabFocus();
                     break;
                 }
         }
@@ -79,16 +72,28 @@ public partial class CryptoSec2TitleWidget : Gtk.Bin
     #endregion
 
     #region Event Handlers
-    /// <summary>
-    /// Button CryptoSecMode on click event handler.
-    /// </summary>
-    protected void btnCryptoSecMode_OnClick (object sender, EventArgs e)
+    protected void btnDatabase_OnClick (object sender, EventArgs e)
     {
-        WinCryptoSec2Config frmCryptoSecConfig = new WinCryptoSec2Config(m_CryptoSecModule);
-        frmCryptoSecConfig.Run();
-        m_CryptoSecModule = frmCryptoSecConfig.CryptoSecModule;
-        frmCryptoSecConfig.Destroy();
-        ChangeCryptoSecApplicationModule();
+        m_CryptoSecModule = CryptoSecModuleType.Database;
+        this.Destroy();
+    }
+
+    protected void btnString_OnClick (object sender, EventArgs e)
+    {
+        m_CryptoSecModule = CryptoSecModuleType.String;
+        this.Destroy();
+    }
+
+    protected void btnXml_OnClick (object sender, EventArgs e)
+    {
+        m_CryptoSecModule = CryptoSecModuleType.XML;
+        this.Destroy();
+    }
+
+    protected void btnFtp_OnClick (object sender, EventArgs e)
+    {
+        m_CryptoSecModule = CryptoSecModuleType.FTP;
+        this.Destroy();
     }
     #endregion
 
@@ -109,5 +114,4 @@ public partial class CryptoSec2TitleWidget : Gtk.Bin
     }
     #endregion
 }
-
 

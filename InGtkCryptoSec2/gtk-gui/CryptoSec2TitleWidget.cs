@@ -15,7 +15,7 @@ public partial class CryptoSec2TitleWidget
 	
 	private global::Gtk.Label lblCryptoSecModeTitle;
 	
-	private global::Gtk.Image btnCryptoSecMode;
+	private global::Gtk.Button btnCryptoSecMode;
 
 	protected virtual void Build ()
 	{
@@ -27,6 +27,7 @@ public partial class CryptoSec2TitleWidget
 		this.hbox2 = new global::Gtk.HBox ();
 		this.hbox2.Name = "hbox2";
 		this.hbox2.Spacing = 6;
+		this.hbox2.BorderWidth = ((uint)(3));
 		// Container child hbox2.Gtk.Box+BoxChild
 		this.hbox3 = new global::Gtk.HBox ();
 		this.hbox3.Name = "hbox3";
@@ -35,7 +36,7 @@ public partial class CryptoSec2TitleWidget
 		this.imgCryptoSec = new global::Gtk.Image ();
 		this.imgCryptoSec.Events = ((global::Gdk.EventMask)(260));
 		this.imgCryptoSec.Name = "imgCryptoSec";
-		this.imgCryptoSec.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.keys.ico");
+		this.imgCryptoSec.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.keys_32x32.png");
 		this.hbox3.Add (this.imgCryptoSec);
 		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.imgCryptoSec]));
 		w1.Position = 0;
@@ -44,7 +45,7 @@ public partial class CryptoSec2TitleWidget
 		// Container child hbox3.Gtk.Box+BoxChild
 		this.lblCryptoSecTitle = new global::Gtk.Label ();
 		this.lblCryptoSecTitle.Name = "lblCryptoSecTitle";
-		this.lblCryptoSecTitle.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>INCRYPTOSEC2</b>");
+		this.lblCryptoSecTitle.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>InCryptoSec2</b>");
 		this.lblCryptoSecTitle.UseMarkup = true;
 		this.hbox3.Add (this.lblCryptoSecTitle);
 		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.lblCryptoSecTitle]));
@@ -55,7 +56,7 @@ public partial class CryptoSec2TitleWidget
 		// Container child hbox3.Gtk.Box+BoxChild
 		this.lblCryptoSecModeInfoTitle = new global::Gtk.Label ();
 		this.lblCryptoSecModeInfoTitle.Name = "lblCryptoSecModeInfoTitle";
-		this.lblCryptoSecModeInfoTitle.LabelProp = global::Mono.Unix.Catalog.GetString ("Running on : ");
+		this.lblCryptoSecModeInfoTitle.LabelProp = global::Mono.Unix.Catalog.GetString ("Running  : ");
 		this.hbox3.Add (this.lblCryptoSecModeInfoTitle);
 		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.lblCryptoSecModeInfoTitle]));
 		w3.Position = 2;
@@ -64,7 +65,7 @@ public partial class CryptoSec2TitleWidget
 		// Container child hbox3.Gtk.Box+BoxChild
 		this.lblCryptoSecModeTitle = new global::Gtk.Label ();
 		this.lblCryptoSecModeTitle.Name = "lblCryptoSecModeTitle";
-		this.lblCryptoSecModeTitle.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>ORACLE</b>");
+		this.lblCryptoSecModeTitle.LabelProp = global::Mono.Unix.Catalog.GetString ("Database Security");
 		this.lblCryptoSecModeTitle.UseMarkup = true;
 		this.lblCryptoSecModeTitle.UseUnderline = true;
 		this.hbox3.Add (this.lblCryptoSecModeTitle);
@@ -76,19 +77,24 @@ public partial class CryptoSec2TitleWidget
 		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.hbox3]));
 		w5.Position = 0;
 		// Container child hbox2.Gtk.Box+BoxChild
-		this.btnCryptoSecMode = new global::Gtk.Image ();
-		this.btnCryptoSecMode.Events = ((global::Gdk.EventMask)(260));
+		this.btnCryptoSecMode = new global::Gtk.Button ();
+		this.btnCryptoSecMode.CanFocus = true;
 		this.btnCryptoSecMode.Name = "btnCryptoSecMode";
-		this.btnCryptoSecMode.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.components.ico");
+		this.btnCryptoSecMode.UseUnderline = true;
+		global::Gtk.Image w6 = new global::Gtk.Image ();
+		w6.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("InGtkCryptoSec2.icons.components_32x32.png");
+		this.btnCryptoSecMode.Image = w6;
 		this.hbox2.Add (this.btnCryptoSecMode);
-		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.btnCryptoSecMode]));
-		w6.Position = 1;
-		w6.Expand = false;
-		w6.Fill = false;
+		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.btnCryptoSecMode]));
+		w7.PackType = ((global::Gtk.PackType)(1));
+		w7.Position = 1;
+		w7.Expand = false;
+		w7.Fill = false;
 		this.Add (this.hbox2);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
 		this.Hide ();
+		this.btnCryptoSecMode.Clicked += new global::System.EventHandler (this.btnCryptoSecMode_OnClick);
 	}
 }

@@ -136,6 +136,20 @@
     <EmbeddedResource Include="icons\MySQL_32x32.png" />
     <EmbeddedResource Include="icons\mSecure_16x16.png" />
     <EmbeddedResource Include="icons\mSecure_32x32.png" />
+    <EmbeddedResource Include="icons\components_16x16.png" />
+    <EmbeddedResource Include="icons\components_32x32.png" />
+    <EmbeddedResource Include="icons\keys_16x16.png" />
+    <EmbeddedResource Include="icons\keys_32x32.png" />
+    <EmbeddedResource Include="icons\server_client_16x16.png" />
+    <EmbeddedResource Include="icons\server_client_32x32.png" />
+    <EmbeddedResource Include="icons\text_16x16.png" />
+    <EmbeddedResource Include="icons\text_32x32.png" />
+    <EmbeddedResource Include="icons\text_tree_16x16.png" />
+    <EmbeddedResource Include="icons\text_tree_32x32.png" />
+    <EmbeddedResource Include="icons\navigate_left2_16x16.png" />
+    <EmbeddedResource Include="icons\navigate_left2_32x32.png" />
+    <EmbeddedResource Include="icons\navigate_right2_16x16.png" />
+    <EmbeddedResource Include="icons\navigate_right2_32x32.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -163,6 +177,9 @@
     <Compile Include="Model\Database\IDatabaseLogin.cs" />
     <Compile Include="WinDatabaseConfig.cs" />
     <Compile Include="gtk-gui\WinDatabaseConfig.cs" />
+    <Compile Include="Model\CryptoSec\CryptoSecModuleType.cs" />
+    <Compile Include="WinCryptoSec2Config.cs" />
+    <Compile Include="gtk-gui\WinCryptoSec2Config.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -175,6 +192,7 @@
     <Folder Include="icons\" />
     <Folder Include="Model\" />
     <Folder Include="Controller\" />
+    <Folder Include="Model\CryptoSec\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\certificate.ico" />

@@ -38,6 +38,35 @@ public partial class WinDatabaseConfig : Gtk.Dialog
     {
         this.Build();
         m_DatabaseType = database;
+
+        switch(m_DatabaseType)
+        {
+            case DatabaseType.Oracle:
+                {
+                    this.btnOracle.GrabFocus();
+                    break;
+                }
+            case DatabaseType.SQLServer:
+                {
+                    this.btnSQLServer.GrabFocus();
+                    break;
+                }
+            case DatabaseType.MySQL:
+                {
+                    this.btnMySQL.GrabFocus();
+                    break;
+                }
+//            case DatabaseType.PostgreSQL:
+//                {
+//                    this.btnPostgreSQL.GrabFocus();
+//                    break;
+//                }
+            case DatabaseType.SQLite:
+                {
+                    this.btnSQLite.GrabFocus();
+                    break;
+                }
+        }
     }
     #endregion
 
@@ -69,7 +98,6 @@ public partial class WinDatabaseConfig : Gtk.Dialog
     protected void btnOracle_OnClick (object sender, EventArgs e)
     {
         this.m_DatabaseType = DatabaseType.Oracle;
-        this.Hide();
         this.Destroy();
     }
     #endregion
