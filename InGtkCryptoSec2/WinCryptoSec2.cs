@@ -18,20 +18,34 @@
 //
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 using System;
+using Gtk;
+using InGtkCryptoSec2.Model;
 
 public partial class WinCryptoSec2 : Gtk.Window
 {
+    #region Private Class Members
+    private CryptoSecModuleType m_CryptoSecModule;
+    #endregion
+
+    #region Class Constuctor
+    /// <summary>
+    /// CryptoSec2TitleWidget class constructor.
+    /// </summary>
     public WinCryptoSec2() : base(Gtk.WindowType.Toplevel)
     {
         this.Build();
 
         InitForm();
     }
+    #endregion
 
     #region Private Member Function
     private void InitForm()
     {
+        m_CryptoSecModule = CryptoSecModuleType.Database;
+        m_CryptoSecModule = cryptosec2titlewidget1.CryptoSecModule;
     }
     #endregion
 
