@@ -20,11 +20,9 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Security;
-using System.Security.Cryptography;
 using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace LibInCryptoSec2
 {
@@ -56,23 +54,19 @@ namespace LibInCryptoSec2
 
             try
             {
-                // Input byte array
                 byte[] arrDes3Data = Convert.FromBase64String(strEncryptedData);
 
-                // Create reader for input string
-                MemoryStream strDataReader = new MemoryStream(arrDes3Data.Length);
-                CryptoStream cryptoStream = new CryptoStream(strDataReader, des3CryptServiceProvider.CreateDecryptor(), CryptoStreamMode.Read);
+                using(var strDataReader = new MemoryStream(arrDes3Data.Length))
+                using(var cryptoStream = new CryptoStream(strDataReader, des3CryptServiceProvider.CreateDecryptor(), CryptoStreamMode.Read))
+                {
+                    strDataReader.Write(arrDes3Data, 0, arrDes3Data.Length);
+                    strDataReader.Position = 0;
 
-                // Decript data
-                strDataReader.Write(arrDes3Data, 0, arrDes3Data.Length);
-                strDataReader.Position = 0;
+                    strDecryptedData = new StreamReader(cryptoStream).ReadToEnd();
 
-                // Read the Decrypted stream
-                strDecryptedData = new StreamReader(cryptoStream).ReadToEnd();
-
-                // Close Streams
-                strDataReader.Close();
-                cryptoStream.Close();
+                    strDataReader.Close();
+                    cryptoStream.Close();
+                }
             }
             catch(Exception)
             {
@@ -94,21 +88,18 @@ namespace LibInCryptoSec2
 
             try
             {
-                // Create reader for input string
-                MemoryStream strDataReader = new MemoryStream(arrEncryptedData.Length);
-                CryptoStream cryptoStream = new CryptoStream(strDataReader, des3CryptServiceProvider.CreateDecryptor(), CryptoStreamMode.Read);
+                using(var strDataReader = new MemoryStream(arrEncryptedData.Length))
+                using(var cryptoStream = new CryptoStream(strDataReader, des3CryptServiceProvider.CreateDecryptor(), CryptoStreamMode.Read))
+                {
+                    strDataReader.Write(arrEncryptedData, 0, arrEncryptedData.Length);
+                    strDataReader.Position = 0;
 
-                // Decript data
-                strDataReader.Write(arrEncryptedData, 0, arrEncryptedData.Length);
-                strDataReader.Position = 0;
+                    string strDecryptedData = new StreamReader(cryptoStream).ReadToEnd();
+                    arrDecryptedData = ASCIIEncoding.ASCII.GetBytes(strDecryptedData);
 
-                // Read the Decrypted stream
-                string strDecryptedData = new StreamReader(cryptoStream).ReadToEnd();
-                arrDecryptedData = ASCIIEncoding.ASCII.GetBytes(strDecryptedData);
-
-                // Close Streams
-                strDataReader.Close();
-                cryptoStream.Close();
+                    strDataReader.Close();
+                    cryptoStream.Close();
+                }
             }
             catch(Exception)
             {
@@ -130,28 +121,23 @@ namespace LibInCryptoSec2
 
             try
             {
-                // Input byte array
                 byte[] arrDes3Data = Encoding.UTF8.GetBytes(strDataToEncrypt);
 
-                // Create reader for input string
-                MemoryStream strDataReader = new MemoryStream(4096);
-                // Decript data
-                CryptoStream cryptoStream = new CryptoStream(strDataReader, des3CryptServiceProvider.CreateEncryptor(), CryptoStreamMode.Write);
+                using(var strDataReader = new MemoryStream(4096))
+                using(var cryptoStream = new CryptoStream(strDataReader, des3CryptServiceProvider.CreateEncryptor(), CryptoStreamMode.Write))
+                {
+                    cryptoStream.Write(arrDes3Data, 0, arrDes3Data.Length);
+                    cryptoStream.FlushFinalBlock();
 
-                // Write Encripted data
-                cryptoStream.Write(arrDes3Data, 0, arrDes3Data.Length);
-                cryptoStream.FlushFinalBlock();
+                    byte[] bResult = new byte[strDataReader.Position];
+                    strDataReader.Position = 0;
+                    strDataReader.Read(bResult, 0, bResult.Length);
 
-                // Read the Encripted stream
-                byte[] bResult = new byte[strDataReader.Position];
-                strDataReader.Position = 0;
-                strDataReader.Read(bResult, 0, bResult.Length);
+                    strEncryptedData = Convert.ToBase64String(bResult);
 
-                strEncryptedData = Convert.ToBase64String(bResult);
-
-                // Close Streams
-                strDataReader.Close();
-                cryptoStream.Close();
+                    strDataReader.Close();
+                    cryptoStream.Close();
+                }
             }
             catch(Exception)
             {
@@ -173,23 +159,19 @@ namespace LibInCryptoSec2
 
             try
             {
-                // Create reader for input string
-                MemoryStream strDataReader = new MemoryStream(4096);
-                // Decript data
-                CryptoStream cryptoStream = new CryptoStream(strDataReader, des3CryptServiceProvider.CreateEncryptor(), CryptoStreamMode.Write);
+                using(var strDataReader = new MemoryStream(4096))
+                using(var cryptoStream = new CryptoStream(strDataReader, des3CryptServiceProvider.CreateEncryptor(), CryptoStreamMode.Write))
+                {
+                    cryptoStream.Write(arrDataToEncrypt, 0, arrDataToEncrypt.Length);
+                    cryptoStream.FlushFinalBlock();
 
-                // Write Encripted data
-                cryptoStream.Write(arrDataToEncrypt, 0, arrDataToEncrypt.Length);
-                cryptoStream.FlushFinalBlock();
+                    arrEncryptedData = new byte[strDataReader.Position];
+                    strDataReader.Position = 0;
+                    strDataReader.Read(arrEncryptedData, 0, arrEncryptedData.Length);
 
-                // Read the Encripted stream
-                arrEncryptedData = new byte[strDataReader.Position];
-                strDataReader.Position = 0;
-                strDataReader.Read(arrEncryptedData, 0, arrEncryptedData.Length);
-
-                // Close Streams
-                strDataReader.Close();
-                cryptoStream.Close();
+                    strDataReader.Close();
+                    cryptoStream.Close();
+                }
             }
             catch(Exception)
             {
@@ -208,34 +190,15 @@ namespace LibInCryptoSec2
         /// <param name="strDes3IV">The STR des3 IV.</param>
         /// <param name="strDes3Key">The STR des3 key.</param>
         /// <returns>The DES3 decypted string data.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
-        public static string Des3DecryptString(string strData, string strDes3IV, string strDes3Key)
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
+        public static string Des3DecryptData(string strData, string strDes3IV, string strDes3Key)
 		{
-            TripleDESCryptoServiceProvider des3CryptServiceProvider;
-
-            try
+            var des3CryptServiceProvider = new TripleDESCryptoServiceProvider()
             {
-                //Set up the Decryptor object
-                des3CryptServiceProvider = new TripleDESCryptoServiceProvider();
-                des3CryptServiceProvider.IV = Convert.FromBase64String(strDes3IV);
-                des3CryptServiceProvider.Key = Convert.FromBase64String(strDes3Key);
-            }
-            catch(CryptographicException)
-            {
-                throw;
-            }
-            catch(ArgumentException)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!");
-            }
-            catch(FormatException)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!");
-            }
-            catch(Exception)
-            {
-                throw;
-            }
+                IV = Convert.FromBase64String(strDes3IV),
+                Key = Convert.FromBase64String(strDes3Key)
+            };
 
             return Des3Decrypt(strData, des3CryptServiceProvider);
 		}
@@ -246,34 +209,16 @@ namespace LibInCryptoSec2
         /// <param name="arrDes3IV">The arr des3 IV.</param>
         /// <param name="arrDes3Key">The arr des3 key.</param>
         /// <returns>The DES3 decypted string data.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
-        public static string Des3DecryptString(string strData, byte[] arrDes3IV, byte[] arrDes3Key)
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
+        public static string Des3DecryptData(string strData, byte[] arrDes3IV, byte[] arrDes3Key)
         {
-            TripleDESCryptoServiceProvider des3CryptServiceProvider;
-
-            try
+            var des3CryptServiceProvider = new TripleDESCryptoServiceProvider()
             {
-                //Set up the Decryptor object
-                des3CryptServiceProvider = new TripleDESCryptoServiceProvider();
-                des3CryptServiceProvider.IV = arrDes3IV;
-                des3CryptServiceProvider.Key = arrDes3Key;
-            }
-            catch(CryptographicException)
-            {
-                throw;
-            }
-            catch(ArgumentException)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!");
-            }
-            catch(FormatException)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!");
-            }
-            catch(Exception)
-            {
-                throw;
-            }
+                IV = arrDes3IV,
+                Key = arrDes3Key
+            };
 
             return Des3Decrypt(strData, des3CryptServiceProvider);
         }
@@ -284,34 +229,16 @@ namespace LibInCryptoSec2
         /// <param name="strDes3IV">The STR des3 IV.</param>
         /// <param name="strDes3Key">The STR des3 key.</param>
         /// <returns>The decypted byte array data.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
         public static byte[] Des3DecryptData(byte[] arrData, string strDes3IV, string strDes3Key)
         {
-            TripleDESCryptoServiceProvider des3CryptServiceProvider;
-
-            try
+            var des3CryptServiceProvider = new TripleDESCryptoServiceProvider()
             {
-                //Set up the Decryptor object
-                des3CryptServiceProvider = new TripleDESCryptoServiceProvider();
-                des3CryptServiceProvider.IV = Convert.FromBase64String(strDes3IV);
-                des3CryptServiceProvider.Key = Convert.FromBase64String(strDes3Key);
-            }
-            catch(CryptographicException)
-            {
-                throw;
-            }
-            catch(ArgumentException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(FormatException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(Exception)
-            {
-                throw;
-            }
+                IV = Convert.FromBase64String(strDes3IV),
+                Key = Convert.FromBase64String(strDes3Key)
+            };
 
             return Des3Decrypt(arrData, des3CryptServiceProvider);
         }
@@ -322,34 +249,15 @@ namespace LibInCryptoSec2
         /// <param name="arrDes3IV">The arr des3 IV.</param>
         /// <param name="arrDes3Key">The arr des3 key.</param>
         /// <returns>The decypted byte array data.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr")]
         public static byte[] Des3DecryptData(byte[] arrData, byte[] arrDes3IV, byte[] arrDes3Key)
         {
-            TripleDESCryptoServiceProvider des3CryptServiceProvider;
-
-            try
+            var des3CryptServiceProvider = new TripleDESCryptoServiceProvider()
             {
-                //Set up the Decryptor object
-                des3CryptServiceProvider = new TripleDESCryptoServiceProvider();
-                des3CryptServiceProvider.IV = arrDes3IV;
-                des3CryptServiceProvider.Key = arrDes3Key;
-            }
-            catch(CryptographicException)
-            {
-                throw;
-            }
-            catch(ArgumentException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(FormatException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(Exception)
-            {
-                throw;
-            }
+                IV = arrDes3IV,
+                Key = arrDes3Key
+            };
 
             return Des3Decrypt(arrData, des3CryptServiceProvider);
         }
@@ -359,9 +267,9 @@ namespace LibInCryptoSec2
         /// <param name="strData">The encriptes STR data.</param>
         /// <returns>The decripted string.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
-        public static string Des3DecryptString(string strData)
+        public static string Des3DecryptData(string strData)
 		{
-			return Des3DecryptString(strData, s_strDes3IV, s_strDes3Key);
+			return Des3DecryptData(strData, s_strDes3IV, s_strDes3Key);
 		}
         /// <summary>
         /// DEs the c3 decrypt data.
@@ -381,34 +289,15 @@ namespace LibInCryptoSec2
         /// <param name="strDes3IV">The STR des3 IV.</param>
         /// <param name="strDes3Key">The STR des3 key.</param>
         /// <returns>The encrypted string data.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
-        public static string Des3EncryptString(string strData, string strDes3IV, string strDes3Key)
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
+        public static string Des3EncryptData(string strData, string strDes3IV, string strDes3Key)
 		{
-            TripleDESCryptoServiceProvider des3CryptServiceProvider;
-
-            try
+            var des3CryptServiceProvider = new TripleDESCryptoServiceProvider() 
             {
-                //Set up the Decryptor object
-                des3CryptServiceProvider = new TripleDESCryptoServiceProvider();
-                des3CryptServiceProvider.IV = Convert.FromBase64String(strDes3IV);
-                des3CryptServiceProvider.Key = Convert.FromBase64String(strDes3Key);
-            }
-            catch(CryptographicException)
-            {
-                throw;
-            }
-            catch(ArgumentException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(FormatException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(Exception)
-            {
-                throw;
-            }
+                IV = Convert.FromBase64String(strDes3IV),
+                Key = Convert.FromBase64String(strDes3Key)
+            };
 
             return Des3Encrypt(strData, des3CryptServiceProvider);
 		}
@@ -419,34 +308,16 @@ namespace LibInCryptoSec2
         /// <param name="arrDes3IV">The arr des3 IV.</param>
         /// <param name="arrDes3Key">The arr des3 key.</param>
         /// <returns>The encrypted string data.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
-        public static string Des3EncryptString(string strData, byte[] arrDes3IV, byte[] arrDes3Key)
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
+        public static string Des3EncryptData(string strData, byte[] arrDes3IV, byte[] arrDes3Key)
         {
-            TripleDESCryptoServiceProvider des3CryptServiceProvider;
-
-            try
+            var des3CryptServiceProvider = new TripleDESCryptoServiceProvider()
             {
-                //Set up the Decryptor object
-                des3CryptServiceProvider = new TripleDESCryptoServiceProvider();
-                des3CryptServiceProvider.IV = arrDes3IV;
-                des3CryptServiceProvider.Key = arrDes3Key;
-            }
-            catch(CryptographicException)
-            {
-                throw;
-            }
-            catch(ArgumentException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(FormatException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(Exception)
-            {
-                throw;
-            }
+                IV = arrDes3IV,
+                Key = arrDes3Key
+            };
 
             return Des3Encrypt(strData, des3CryptServiceProvider);
         }
@@ -457,37 +328,18 @@ namespace LibInCryptoSec2
         /// <param name="strDes3IV">The STR des3 IV.</param>
         /// <param name="strDes3Key">The STR des3 key.</param>
         /// <returns>The encryted byte array data.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
         public static byte[] Des3EncryptData(byte[] arrData, string strDes3IV, string strDes3Key)
 		{
-            TripleDESCryptoServiceProvider des3CryptServiceProvider;
-
-            try
+            var des3CryptServiceProvider = new TripleDESCryptoServiceProvider() 
             {
-                //Set up the Decryptor object
-                des3CryptServiceProvider = new TripleDESCryptoServiceProvider();
-                des3CryptServiceProvider.IV = Convert.FromBase64String(strDes3IV);
-                des3CryptServiceProvider.Key = Convert.FromBase64String(strDes3Key);
-            }
-            catch(CryptographicException)
-            {
-                throw;
-            }
-            catch(ArgumentException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(FormatException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(Exception)
-            {
-                throw;
-            }
+                IV = Convert.FromBase64String(strDes3IV),
+                Key = Convert.FromBase64String(strDes3Key)
+            };
 
             return Des3Encrypt(arrData, des3CryptServiceProvider);
-            
 		}
         /// <summary>
         /// DES3 encript data.
@@ -496,37 +348,17 @@ namespace LibInCryptoSec2
         /// <param name="arrDes3IV">The arr des3 IV.</param>
         /// <param name="arrDes3Key">The arr des3 key.</param>
         /// <returns>The encryted byte array data.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), 
+        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "arr")]
         public static byte[] Des3EncryptData(byte[] arrData, byte[] arrDes3IV, byte[] arrDes3Key)
         {
-            TripleDESCryptoServiceProvider des3CryptServiceProvider;
-
-            try
+            var des3CryptServiceProvider = new TripleDESCryptoServiceProvider()
             {
-                //Set up the Decryptor object
-                des3CryptServiceProvider = new TripleDESCryptoServiceProvider();
-                des3CryptServiceProvider.IV = arrDes3IV;
-                des3CryptServiceProvider.Key = arrDes3Key;
-            }
-            catch(CryptographicException)
-            {
-                throw;
-            }
-            catch(ArgumentException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(FormatException ex)
-            {
-                throw new Exception("DES3 Cypto provider parameters IV and Key are invalid!!", ex);
-            }
-            catch(Exception)
-            {
-                throw;
-            }
+                IV = arrDes3IV,
+                Key = arrDes3Key
+            };
 
             return Des3Encrypt(arrData, des3CryptServiceProvider);
-
         }
         /// <summary>
         /// DEs the c3 encript string. Use for small string objects.
@@ -534,9 +366,9 @@ namespace LibInCryptoSec2
         /// <param name="strData">The STR data for encription.</param>
         /// <returns>The encripted string.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "str")]
-        public static string Des3EncryptString(string strData)
+        public static string Des3EncryptData(string strData)
         {
-            return Des3EncryptString(strData, s_strDes3IV, s_strDes3Key);
+            return Des3EncryptData(strData, s_strDes3IV, s_strDes3Key);
         }
         /// <summary>
         /// DEs the c3 encript data.

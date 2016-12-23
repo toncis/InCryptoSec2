@@ -1,11 +1,24 @@
 ﻿<Properties StartupItem="InGtkCryptoSec2/InGtkCryptoSec2.csproj" GitUserInfo="UsingGIT">
   <AuthorInfo Name="Tonči Sviličić" Email="tonci.svilicic@in2.hr" Copyright="Tonči Sviličić" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="InGtkCryptoSec2/WinDatabaseConfig.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument=".vscode/tasks.json">
     <Files>
-      <File FileName="InGtkCryptoSec2/WinDatabaseConfig.cs" Line="50" Column="1" />
+      <File FileName="InGtkCryptoSec2/WinCryptoSec2.cs" Line="1" Column="1" />
+      <File FileName="InGtkCryptoSec2/CryptoSec2TitleWidget.cs" Line="1" Column="1" />
       <File FileName="InGtkCryptoSec2/WidCryptoDatabase.cs" Line="1" Column="1" />
-      <File FileName="InGtkCryptoSec2/gtk-gui/generated.cs" Line="1" Column="1" />
+      <File FileName="InGtkCryptoSec2/Main.cs" Line="1" Column="1" />
+      <File FileName="InGtkCryptoSec2/CryptoSecActionGroup.cs" Line="1" Column="1" />
+      <File FileName="InGtkCryptoSec2/CryptoSec2FooterWidget.cs" Line="1" Column="1" />
+      <File FileName="InGtkCryptoSec2/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="InGtkCryptoSec2/WinDatabaseConfig.cs" Line="1" Column="1" />
+      <File FileName="InGtkCryptoSec2/WinCryptoSec2Config.cs" Line="1" Column="1" />
+      <File FileName="InGtkCryptoSec2/DatabaseConnectionSecWidget.cs" Line="1" Column="1" />
+      <File FileName="InGtkCryptoSec2/gtk-gui/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="../../../../../../usr/lib/mono/4.5/Microsoft.Common.targets" Line="1" Column="1" />
+      <File FileName="LibInCryptoSec2/AsymmetricCryptography/RsaCryptoSecManager.cs" Line="1" Column="1" />
+      <File FileName=".gitignore" Line="1" Column="1" />
+      <File FileName=".vscode/launch.json" Line="19" Column="33" />
+      <File FileName=".vscode/tasks.json" Line="15" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

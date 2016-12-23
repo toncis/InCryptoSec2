@@ -1,4 +1,4 @@
-﻿//
+//
 //  WinCryptoSec2.cs
 //
 //  Author:

@@ -1,0 +1,7 @@
+/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/bin/Debug/LibInCryptoSec2.dll.mdb
+/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/bin/Debug/LibInCryptoSec2.dll
+/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/obj/Debug/LibInCryptoSec2.dll
+/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/obj/Debug/LibInCryptoSec2.dll.mdb
+/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/obj/Debug/.NETFramework,Version=v4.6.AssemblyAttribute.cs

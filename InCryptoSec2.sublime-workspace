@@ -5,7 +5,7 @@
 		[
 			[
 				"T",
-				"GetType()	Type"
+				"GetType()\tType"
 			]
 		]
 	},
@@ -16,70 +16,24 @@
 			"settings":
 			{
 				"buffer_size": 21431,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "InGtkCryptoSec2/Main.cs",
+			"file": "InGtkCryptoSec2/WinCryptoSec2.cs",
 			"settings":
 			{
-				"buffer_size": 5439,
+				"buffer_size": 1460,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "InCryptoSec2.sublime-project",
+			"file": "InGtkCryptoSec2/gtk-gui/generated.cs",
 			"settings":
 			{
-				"buffer_size": 640,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "InGtkCryptoSec2/Model/Database/DatabaseType.cs",
-			"settings":
-			{
-				"buffer_size": 1765,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "InGtkCryptoSec2/Model/Database/IDatabaseLogin.cs",
-			"settings":
-			{
-				"buffer_size": 2257,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 123,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "InGtkCryptoSec2/CryptoConfigWidget.cs",
-			"settings":
-			{
-				"buffer_size": 982,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "LibInCryptoSec2/SymmetricCryptography/DesCryptoSecManager.cs",
-			"settings":
-			{
-				"buffer_size": 23322,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "InGtkCryptoSec2/AssemblyInfo.cs",
-			"settings":
-			{
-				"buffer_size": 1790,
+				"buffer_size": 4600,
 				"line_ending": "Windows"
 			}
 		}
@@ -91,8 +45,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 369.0,
-		"last_filter": "",
+		"height": 359.0,
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
 			[
@@ -112,7 +66,7 @@
 				"Package Control: Disable Package"
 			]
 		],
-		"width": 449.0
+		"width": 502.0
 	},
 	"console":
 	{
@@ -134,13 +88,18 @@
 	"expanded_folders":
 	[
 		"/home/toncis/Projects/Mono/IN2/InCryptoSec2",
-		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2",
-		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2/Controller",
-		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2/gtk-gui",
-		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2"
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/.vscode"
 	],
 	"file_history":
 	[
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2/Main.cs",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InCryptoSec2.sublime-project",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2/Model/Database/DatabaseType.cs",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2/Model/Database/IDatabaseLogin.cs",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/README.md",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2/CryptoConfigWidget.cs",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/SymmetricCryptography/DesCryptoSecManager.cs",
+		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InGtkCryptoSec2/AssemblyInfo.cs",
 		"/home/toncis/Projects/Mono/IN2/InCryptoSec2/InCryptoSec2.sln",
 		"/home/toncis/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/home/toncis/Projects/mono/InCryptoSec2/InCryptoSec2.sublime-project",
@@ -224,7 +183,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -240,8 +199,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								18065,
+								18065
 							]
 						],
 						"settings":
@@ -249,16 +208,6 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -269,6 +218,85 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
@@ -279,602 +307,63 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
 							],
 							"syntax": "Packages/C#/C#.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2075.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "InGtkCryptoSec2/Main.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5439,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								473,
-								473
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"syntax": "Packages/C#/C#.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "InCryptoSec2.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 640,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								588,
-								588
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "InGtkCryptoSec2/Model/Database/DatabaseType.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1765,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1021,
-								1021
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"oops":
-							{
-								"14,19": "Using directive is not used by code and can be removed safely.",
-								"48,53": "Using directive is not used by code and can be removed safely.",
-								"67,72": "Using directive is not used by code and can be removed safely."
-							},
-							"syntax": "Packages/C#/C#.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 291.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "InGtkCryptoSec2/Model/Database/IDatabaseLogin.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2257,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1703,
-								1703
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"oops":
-							{
-								"1516,1517": "Unexpected symbol `DatabaseType''",
-								"1556,1557": "Unexpected symbol `}''"
-							},
-							"syntax": "Packages/C#/C#.tmLanguage",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 472.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 123,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "InGtkCryptoSec2/CryptoConfigWidget.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 982,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"oops":
-							{
-								"813,816": "'Gtk' is not a known identifier",
-								"903,906": "'Gtk' is not a known identifier",
-								"907,910": "'?' does not contain a definition for 'Bin'"
-							},
-							"syntax": "Packages/C#/C#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5849.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "LibInCryptoSec2/SymmetricCryptography/DesCryptoSecManager.cs",
+					"buffer": 1,
+					"file": "InGtkCryptoSec2/WinCryptoSec2.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23322,
+						"buffer_size": 1460,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14709,
-								14709
+								1139,
+								1139
 							]
 						],
 						"settings":
@@ -882,31 +371,31 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -917,102 +406,63 @@
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
 							"oops":
 							{
-								"10009,10019": "Parameter can be IEnumerable",
-								"10400,10405": "Catch clause with a single 'throw' statement is redundant.",
-								"10813,10818": "Catch clause with a single 'throw' statement is redundant.",
-								"12193,12198": "Catch clause with a single 'throw' statement is redundant.",
-								"12620,12625": "Catch clause with a single 'throw' statement is redundant.",
-								"13405,13414": "Parameter can be IEnumerable",
-								"13423,13433": "Parameter can be IEnumerable",
-								"13814,13819": "Catch clause with a single 'throw' statement is redundant.",
-								"14241,14246": "Catch clause with a single 'throw' statement is redundant.",
-								"16473,16478": "Catch clause with a single 'throw' statement is redundant.",
-								"16900,16905": "Catch clause with a single 'throw' statement is redundant.",
-								"1714,1744": "Parameter can be declared with base type",
-								"17819,17828": "Parameter can be IEnumerable",
-								"17837,17847": "Parameter can be IEnumerable",
-								"1819,1825": "Assignment is redundant",
-								"18228,18233": "Catch clause with a single 'throw' statement is redundant.",
-								"18655,18660": "Catch clause with a single 'throw' statement is redundant.",
-								"20029,20034": "Catch clause with a single 'throw' statement is redundant.",
-								"20456,20461": "Catch clause with a single 'throw' statement is redundant.",
-								"2048,2060": "Use 'var' keyword",
-								"21248,21257": "Parameter can be IEnumerable",
-								"21266,21276": "Parameter can be IEnumerable",
-								"2131,2143": "Use 'var' keyword",
-								"21657,21662": "Catch clause with a single 'throw' statement is redundant.",
-								"22084,22089": "Catch clause with a single 'throw' statement is redundant.",
-								"3217,3247": "Parameter can be declared with base type",
-								"3296,3300": "Use 'var' keyword",
-								"3322,3325": "Assignment is redundant",
-								"3432,3444": "Use 'var' keyword",
-								"3520,3532": "Use 'var' keyword",
-								"3975,3988": "Static method invoked via derived type",
-								"4692,4722": "Parameter can be declared with base type",
-								"4797,4803": "Assignment is redundant",
-								"5024,5036": "Use 'var' keyword",
-								"5125,5137": "Use 'var' keyword",
-								"5477,5481": "Use 'var' keyword",
-								"6375,6405": "Parameter can be declared with base type",
-								"6454,6458": "Use 'var' keyword",
-								"6480,6483": "Assignment is redundant",
-								"6590,6602": "Use 'var' keyword",
-								"6691,6703": "Use 'var' keyword",
-								"808,813": "Using directive is not used by code and can be removed safely.",
-								"861,866": "Using directive is not used by code and can be removed safely.",
-								"8656,8661": "Catch clause with a single 'throw' statement is redundant.",
-								"9069,9074": "Catch clause with a single 'throw' statement is redundant.",
-								"9991,10000": "Parameter can be IEnumerable"
+								"1143,1146": "'Gtk' is not a known identifier",
+								"1147,1157": "'?' does not contain a definition for 'WindowType'",
+								"1158,1166": "'?' does not contain a definition for 'Toplevel'",
+								"1167,1168": "Invocation error: TooManyPositionalArguments",
+								"808,811": "'Gtk' is not a known identifier",
+								"880,883": "'Gtk' is not a known identifier",
+								"884,890": "'?' does not contain a definition for 'Window'"
 							},
 							"syntax": "Packages/C#/C#.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4243.0,
+						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "InGtkCryptoSec2/AssemblyInfo.cs",
+					"buffer": 2,
+					"file": "InGtkCryptoSec2/gtk-gui/generated.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1790,
+						"buffer_size": 4600,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1475,
+								1475
 							]
 						],
 						"settings":
@@ -1020,31 +470,31 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -1055,34 +505,325 @@
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2712,
+										2713
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1408,
+										1409
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
 							],
-							"syntax": "Packages/C#/C#.tmLanguage"
+							"oops":
+							{
+								"1009,1010": "'?' does not contain a definition for 'Add'",
+								"1023,1026": "Unknown Resolver Error",
+								"1027,1034": "'?' does not contain a definition for 'IconSet'",
+								"1052,1055": "Unknown Resolver Error",
+								"1056,1063": "'?' does not contain a definition for 'IconSet'",
+								"1073,1076": "Error: ?",
+								"1077,1083": "'?' does not contain a definition for 'Pixbuf'",
+								"1084,1100": "'?' does not contain a definition for 'LoadFromResource'",
+								"1145,1146": "'?' does not contain a definition for 'LoadFromResource'",
+								"1146,1147": "'?' does not contain a definition for 'IconSet'",
+								"1155,1158": "'?' does not contain a definition for 'Add'",
+								"1176,1177": "'?' does not contain a definition for 'Add'",
+								"1190,1193": "Unknown Resolver Error",
+								"1194,1201": "'?' does not contain a definition for 'IconSet'",
+								"1219,1222": "Unknown Resolver Error",
+								"1223,1230": "'?' does not contain a definition for 'IconSet'",
+								"1240,1243": "Error: ?",
+								"1244,1250": "'?' does not contain a definition for 'Pixbuf'",
+								"1251,1267": "'?' does not contain a definition for 'LoadFromResource'",
+								"1310,1311": "'?' does not contain a definition for 'LoadFromResource'",
+								"1311,1312": "'?' does not contain a definition for 'IconSet'",
+								"1320,1323": "'?' does not contain a definition for 'Add'",
+								"1341,1342": "'?' does not contain a definition for 'Add'",
+								"1350,1360": "'?' does not contain a definition for 'AddDefault'",
+								"1363,1364": "'?' does not contain a definition for 'AddDefault'",
+								"1420,1423": "'Gtk' is not a known identifier",
+								"1424,1430": "'?' does not contain a definition for 'Widget'",
+								"1451,1454": "'Gtk' is not a known identifier",
+								"1455,1464": "'?' does not contain a definition for 'UIManager'",
+								"1514,1517": "'Gtk' is not a known identifier",
+								"1518,1521": "'?' does not contain a definition for 'Bin'",
+								"1580,1593": "'Bin' does not contain a definition for 'SizeRequested'",
+								"1601,1604": "'Gtk' is not a known identifier",
+								"1605,1625": "'?' does not contain a definition for 'SizeRequestedHandler'",
+								"1646,1647": "Error: Int32",
+								"1655,1668": "'Bin' does not contain a definition for 'SizeAllocated'",
+								"1676,1679": "'Gtk' is not a known identifier",
+								"1680,1700": "'?' does not contain a definition for 'SizeAllocatedHandler'",
+								"1721,1722": "Error: Int32",
+								"1730,1735": "'Bin' does not contain a definition for 'Added'",
+								"1743,1746": "'Gtk' is not a known identifier",
+								"1747,1759": "'?' does not contain a definition for 'AddedHandler'",
+								"1772,1773": "Error: Int32",
+								"182,185": "'Gtk' is not a known identifier",
+								"1841,1844": "'Gtk' is not a known identifier",
+								"1845,1862": "'?' does not contain a definition for 'SizeRequestedArgs'",
+								"186,192": "'?' does not contain a definition for 'Widget'",
+								"1913,1924": "'SizeRequestedArgs' does not contain a definition for 'Requisition'",
+								"1938,1949": "'Widget' does not contain a definition for 'SizeRequest'",
+								"1952,1953": "'Widget' does not contain a definition for 'SizeRequest'",
+								"2011,2014": "'Gtk' is not a known identifier",
+								"2015,2032": "'?' does not contain a definition for 'SizeAllocatedArgs'",
+								"2089,2099": "'Widget' does not contain a definition for 'Allocation'",
+								"2107,2117": "'SizeAllocatedArgs' does not contain a definition for 'Allocation'",
+								"2168,2171": "'Gtk' is not a known identifier",
+								"2172,2181": "'?' does not contain a definition for 'AddedArgs'",
+								"2213,2219": "Cannot convert from ? to [UnknownType Widget]",
+								"2254,2257": "'Gtk' is not a known identifier",
+								"2258,2267": "'?' does not contain a definition for 'UIManager'",
+								"2316,2324": "'Widget' does not contain a definition for 'Realized'",
+								"2369,2370": "Error: Int32",
+								"2484,2487": "'Gtk' is not a known identifier",
+								"2488,2494": "'?' does not contain a definition for 'Widget'",
+								"2517,2525": "'Widget' does not contain a definition for 'Toplevel'",
+								"2558,2561": "'Gtk' is not a known identifier",
+								"2562,2568": "'?' does not contain a definition for 'Window'",
+								"2588,2589": "Cannot convert from ? to System.Object",
+								"2590,2591": "Invocation error: ArgumentTypeMismatch",
+								"2602,2605": "'Gtk' is not a known identifier",
+								"2606,2612": "'?' does not contain a definition for 'Window'",
+								"2618,2631": "'?' does not contain a definition for 'AddAccelGroup'",
+								"2648,2658": "'UIManager' does not contain a definition for 'AccelGroup'",
+								"2659,2660": "'?' does not contain a definition for 'AddAccelGroup'",
+								"2683,2687": "Cannot convert from null to [UnknownType UIManager]",
+								"2754,2757": "'Gdk' is not a known identifier",
+								"2758,2764": "'?' does not contain a definition for 'Pixbuf'",
+								"2775,2778": "'Gtk' is not a known identifier",
+								"2779,2785": "'?' does not contain a definition for 'Widget'",
+								"2807,2810": "'Gtk' is not a known identifier",
+								"2811,2819": "'?' does not contain a definition for 'IconSize'",
+								"2833,2836": "'Gdk' is not a known identifier",
+								"2837,2843": "'?' does not contain a definition for 'Pixbuf'",
+								"2857,2867": "'Widget' does not contain a definition for 'RenderIcon'",
+								"2886,2887": "'Widget' does not contain a definition for 'RenderIcon'",
+								"2976,2979": "Error: ?",
+								"2980,2984": "'?' does not contain a definition for 'Icon'",
+								"2985,2995": "'?' does not contain a definition for 'SizeLookup'",
+								"302,305": "Unknown Resolver Error",
+								"3020,3021": "'?' does not contain a definition for 'SizeLookup'",
+								"3044,3047": "'Gtk' is not a known identifier",
+								"3048,3057": "'?' does not contain a definition for 'IconTheme'",
+								"3058,3065": "'?' does not contain a definition for 'Default'",
+								"306,317": "'?' does not contain a definition for 'IconFactory'",
+								"3066,3074": "'?' does not contain a definition for 'LoadIcon'",
+								"3088,3089": "'?' does not contain a definition for 'LoadIcon'",
+								"3262,3265": "'Gdk' is not a known identifier",
+								"3266,3272": "'?' does not contain a definition for 'Pixmap'",
+								"3284,3287": "'Gdk' is not a known identifier",
+								"3288,3294": "'?' does not contain a definition for 'Pixmap'",
+								"3296,3299": "'Gdk' is not a known identifier",
+								"3300,3306": "'?' does not contain a definition for 'Screen'",
+								"3307,3314": "'?' does not contain a definition for 'Default'",
+								"3315,3325": "'?' does not contain a definition for 'RootWindow'",
+								"3334,3335": "'?' does not contain a definition for 'Pixmap'",
+								"3342,3345": "'Gdk' is not a known identifier",
+								"3346,3348": "'?' does not contain a definition for 'GC'",
+								"335,338": "Unknown Resolver Error",
+								"3358,3361": "'Gdk' is not a known identifier",
+								"3362,3364": "'?' does not contain a definition for 'GC'",
+								"3371,3372": "'?' does not contain a definition for 'GC'",
+								"3382,3392": "'?' does not contain a definition for 'RgbFgColor'",
+								"339,350": "'?' does not contain a definition for 'IconFactory'",
+								"3399,3402": "'Gdk' is not a known identifier",
+								"3403,3408": "'?' does not contain a definition for 'Color'",
+								"3424,3425": "'?' does not contain a definition for 'Color'",
+								"3437,3450": "'?' does not contain a definition for 'DrawRectangle'",
+								"3475,3476": "'?' does not contain a definition for 'DrawRectangle'",
+								"3486,3496": "'?' does not contain a definition for 'RgbFgColor'",
+								"3503,3506": "'Gdk' is not a known identifier",
+								"3507,3512": "'?' does not contain a definition for 'Color'",
+								"3522,3523": "'?' does not contain a definition for 'Color'",
+								"353,354": "'?' does not contain a definition for 'IconFactory'",
+								"3535,3548": "'?' does not contain a definition for 'DrawRectangle'",
+								"3586,3587": "'?' does not contain a definition for 'DrawRectangle'",
+								"3597,3614": "'?' does not contain a definition for 'SetLineAttributes'",
+								"3619,3622": "'Gdk' is not a known identifier",
+								"3623,3632": "'?' does not contain a definition for 'LineStyle'",
+								"3633,3638": "'?' does not contain a definition for 'Solid'",
+								"3640,3643": "'Gdk' is not a known identifier",
+								"3644,3652": "'?' does not contain a definition for 'CapStyle'",
+								"3653,3658": "'?' does not contain a definition for 'Round'",
+								"3660,3663": "'Gdk' is not a known identifier",
+								"3664,3673": "'?' does not contain a definition for 'JoinStyle'",
+								"367,370": "Unknown Resolver Error",
+								"3674,3679": "'?' does not contain a definition for 'Round'",
+								"3680,3681": "'?' does not contain a definition for 'SetLineAttributes'",
+								"3691,3701": "'?' does not contain a definition for 'RgbFgColor'",
+								"3708,3711": "'Gdk' is not a known identifier",
+								"371,378": "'?' does not contain a definition for 'IconSet'",
+								"3712,3717": "'?' does not contain a definition for 'Color'",
+								"3729,3730": "'?' does not contain a definition for 'Color'",
+								"3742,3750": "'?' does not contain a definition for 'DrawLine'",
+								"3821,3822": "'?' does not contain a definition for 'DrawLine'",
+								"3834,3842": "'?' does not contain a definition for 'DrawLine'",
+								"3913,3914": "'?' does not contain a definition for 'DrawLine'",
+								"3928,3931": "'Gdk' is not a known identifier",
+								"3932,3938": "'?' does not contain a definition for 'Pixbuf'",
+								"3939,3951": "'?' does not contain a definition for 'FromDrawable'",
+								"396,399": "Unknown Resolver Error",
+								"3964,3972": "'?' does not contain a definition for 'Colormap'",
+								"3993,3994": "'?' does not contain a definition for 'FromDrawable'",
+								"400,407": "'?' does not contain a definition for 'IconSet'",
+								"4078,4081": "Unknown Resolver Error",
+								"4082,4093": "'?' does not contain a definition for 'ActionGroup'",
+								"4119,4122": "'Gtk' is not a known identifier",
+								"4123,4134": "'?' does not contain a definition for 'ActionGroup'",
+								"417,420": "Error: ?",
+								"421,427": "'?' does not contain a definition for 'Pixbuf'",
+								"4256,4259": "'Gtk' is not a known identifier",
+								"4260,4271": "'?' does not contain a definition for 'ActionGroup'",
+								"428,444": "'?' does not contain a definition for 'LoadFromResource'",
+								"4473,4474": "Cannot convert from CryptoSecActionGroup to [UnknownType ActionGroup]",
+								"485,486": "'?' does not contain a definition for 'LoadFromResource'",
+								"486,487": "'?' does not contain a definition for 'IconSet'",
+								"495,498": "'?' does not contain a definition for 'Add'",
+								"522,523": "'?' does not contain a definition for 'Add'",
+								"536,539": "Unknown Resolver Error",
+								"540,547": "'?' does not contain a definition for 'IconSet'",
+								"565,568": "Unknown Resolver Error",
+								"569,576": "'?' does not contain a definition for 'IconSet'",
+								"586,589": "Error: ?",
+								"590,596": "'?' does not contain a definition for 'Pixbuf'",
+								"597,613": "'?' does not contain a definition for 'LoadFromResource'",
+								"651,652": "'?' does not contain a definition for 'LoadFromResource'",
+								"652,653": "'?' does not contain a definition for 'IconSet'",
+								"661,664": "'?' does not contain a definition for 'Add'",
+								"685,686": "'?' does not contain a definition for 'Add'",
+								"699,702": "Unknown Resolver Error",
+								"703,710": "'?' does not contain a definition for 'IconSet'",
+								"728,731": "Unknown Resolver Error",
+								"732,739": "'?' does not contain a definition for 'IconSet'",
+								"749,752": "Error: ?",
+								"753,759": "'?' does not contain a definition for 'Pixbuf'",
+								"760,776": "'?' does not contain a definition for 'LoadFromResource'",
+								"813,814": "'?' does not contain a definition for 'LoadFromResource'",
+								"814,815": "'?' does not contain a definition for 'IconSet'",
+								"823,826": "'?' does not contain a definition for 'Add'",
+								"846,847": "'?' does not contain a definition for 'Add'",
+								"860,863": "Unknown Resolver Error",
+								"864,871": "'?' does not contain a definition for 'IconSet'",
+								"889,892": "Unknown Resolver Error",
+								"893,900": "'?' does not contain a definition for 'IconSet'",
+								"910,913": "Error: ?",
+								"914,920": "'?' does not contain a definition for 'Pixbuf'",
+								"921,937": "'?' does not contain a definition for 'LoadFromResource'",
+								"975,976": "'?' does not contain a definition for 'LoadFromResource'",
+								"976,977": "'?' does not contain a definition for 'IconSet'",
+								"985,988": "'?' does not contain a definition for 'Add'"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 630.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1121,7 +862,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 247.0
+		"height": 168.0
 	},
 	"output.find_results":
 	{
@@ -1170,7 +911,7 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 325.0,

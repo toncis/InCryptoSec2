@@ -29,7 +29,11 @@ namespace InGtkCryptoSec2
 		public static void Main (string[] args)
 		{
 			Application.Init ();
-			//MainWindow win = new MainWindow ();
+            Gtk.Settings.Default.ThemeName = "Arc";
+            //Gtk.Settings.Default.ThemeName = "Theme/gtk-2.0/gtkrc";
+            //Gtk.Rc.Parse ("./Theme/gtk-2.0/gtkrc");
+
+            //MainWindow win = new MainWindow ();
 			//win.Show ();
             WinCryptoSec2 win2 = new WinCryptoSec2 ();
             win2.Show ();

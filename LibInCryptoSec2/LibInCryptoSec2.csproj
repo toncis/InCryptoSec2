@@ -10,8 +10,9 @@
     <RootNamespace>LibInCryptoSec2</RootNamespace>
     <AssemblyName>LibInCryptoSec2</AssemblyName>
     <Description>LibInCryptoSec2 is a cryptography .NET library used for used for encryption and decryption.</Description>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CodePage>65001</CodePage>
+    <UseMSBuildEngine>False</UseMSBuildEngine>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

@@ -10,10 +10,11 @@
     <RootNamespace>InGtkCryptoSec2</RootNamespace>
     <AssemblyName>InGtkCryptoSec2</AssemblyName>
     <Description>InGtkCryptoSec2 is a GTK application in  .NET used as front end for LibInCryptoSec2.</Description>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <StartupObject>InGtkCryptoSec2.MainClass</StartupObject>
     <CodePage>65001</CodePage>
     <ApplicationIcon>icons\keys.ico</ApplicationIcon>
+    <UseMSBuildEngine>False</UseMSBuildEngine>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

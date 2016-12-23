@@ -1,0 +1,3 @@
+/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/obj/Release/.NETFramework,Version=v4.6.AssemblyAttribute.cs
+/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/bin/Release/LibInCryptoSec2.dll
+/home/toncis/Projects/Mono/IN2/InCryptoSec2/LibInCryptoSec2/obj/Release/LibInCryptoSec2.dll

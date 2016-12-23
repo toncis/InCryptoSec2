@@ -27,7 +27,6 @@ using InGtkCryptoSec2.Model;
 public partial class CryptoSec2TitleWidget : Gtk.Bin
 {
     #region Private Class Members
-    private CryptoSecModuleType m_CryptoSecModule;
     #endregion
 
     #region Class Constuctor
@@ -36,7 +35,7 @@ public partial class CryptoSec2TitleWidget : Gtk.Bin
     /// </summary>
     public CryptoSec2TitleWidget()
     {
-        m_CryptoSecModule = CryptoSecModuleType.Database;
+        this.CryptoSecModule = CryptoSecModuleType.Database;
         this.Build();
     }
     #endregion
@@ -47,7 +46,7 @@ public partial class CryptoSec2TitleWidget : Gtk.Bin
     /// </summary>
     private void ChangeCryptoSecApplicationModule()
     {
-        switch(m_CryptoSecModule)
+        switch(CryptoSecModule)
         {
             case CryptoSecModuleType.Database :
                 {
@@ -84,9 +83,9 @@ public partial class CryptoSec2TitleWidget : Gtk.Bin
     /// </summary>
     protected void btnCryptoSecMode_OnClick (object sender, EventArgs e)
     {
-        WinCryptoSec2Config frmCryptoSecConfig = new WinCryptoSec2Config(m_CryptoSecModule);
+        WinCryptoSec2Config frmCryptoSecConfig = new WinCryptoSec2Config(CryptoSecModule);
         frmCryptoSecConfig.Run();
-        m_CryptoSecModule = frmCryptoSecConfig.CryptoSecModule;
+        CryptoSecModule = frmCryptoSecConfig.CryptoSecModule;
         frmCryptoSecConfig.Destroy();
         ChangeCryptoSecApplicationModule();
     }
@@ -96,17 +95,7 @@ public partial class CryptoSec2TitleWidget : Gtk.Bin
     /// <summary>
     /// Active InCryptoSec2 application module.
     /// </summary>
-    public CryptoSecModuleType CryptoSecModule 
-    {
-        get
-        {
-            return m_CryptoSecModule;
-        }
-        set 
-        {
-            m_CryptoSecModule = value;
-        }
-    }
+    public CryptoSecModuleType CryptoSecModule { get; set;}
     #endregion
 }
 
